@@ -86,8 +86,8 @@ This is a fan-made, unofficial launcher. It is not affiliated with, endorsed by,
 ### Install & Run
 
 ```bash
-git clone https://github.com/your-username/vortex-launcher.git
-cd vortex-launcher
+git clone https://github.com/VultureWhite/Vortex-Launcher.git
+cd Vortex-Launcher
 npm install
 npm start
 ```
