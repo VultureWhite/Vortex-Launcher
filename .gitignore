@@ -1,0 +1,10 @@
+node_modules/
+dist/
+out/
+*.log
+tmp-*.jar
+src/data/accounts.json
+src/data/settings.json
+src/data/instances.json
+assets/skins/Vulture.png
+.env

@@ -4,6 +4,10 @@ An unofficial Minecraft launcher built with Electron. Offline-mode only — no M
 
 ![Vortex Launcher](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Electron](https://img.shields.io/badge/Electron-35+-purple)
 
+## Download
+
+Grab the latest release from the [Releases](../../releases) page.
+
 ## Features
 
 ### Instance System
@@ -33,14 +37,15 @@ All loaders resolve, download, and install automatically at launch time.
 - Manual Java path override via Settings
 
 ### Skins
-- 8 official Minecraft skin presets (Steve, Alex, Herobrine, Notch, Dinnerbone, jeb_, Zombie, Enderman) fetched from Mojang's texture servers
+- 9 built-in skin presets (Alex, Ari, Efe, Kai, Makena, Noor, Steve, Sunny, Zuri)
 - Upload custom skin PNGs (64×64 or 64×32)
 - Front-facing paper-doll preview
-- Skins persist across launcher restarts
+- Selected skins saved to the skins folder automatically
+
 
 ### Settings
 - Light / dark theme toggle
-- Memory allocation slider (1–16 GB)
+- Memory allocation slider
 - Resolution selector
 - Custom game directory (with native folder picker)
 - Keep launcher open after game exits (toggle)
@@ -52,6 +57,24 @@ All loaders resolve, download, and install automatically at launch time.
 - Pinned play bar at the bottom across all views
 - Responsive layout with mobile slide-in menu
 - What's New changelog view
+
+## How It Works
+
+1. **Create an instance** — pick a name, Minecraft version, loader, and icon
+2. **Install content** — browse Modrinth mods or upload files directly
+3. **Hit PLAY** — the launcher downloads everything needed (client JAR, libraries, assets, loader) and starts the game
+4. All paths, classpath construction, and JVM arguments are handled automatically per loader
+
+## Supported Versions
+
+Any version available in the official Minecraft version manifest. Loader support varies by MC version:
+- **Fabric/Quilt**: most modern versions
+- **NeoForge**: 1.20.5+
+- **Forge**: most versions (legacy installer + processor-based for newer)
+
+## Disclaimer
+
+This is a fan-made, unofficial launcher. It is not affiliated with, endorsed by, or connected to Mojang Studios or Microsoft. All Minecraft game content, trademarks, and the Minecraft name belong to Mojang Studios / Microsoft.
 
 ## Getting Started
 
@@ -75,12 +98,28 @@ For development with DevTools:
 npm run dev
 ```
 
+### Building Distributables
+
+```bash
+npm run build:win     # Windows NSIS installer + portable .exe
+npm run build:mac     # macOS .dmg
+npm run build:linux   # Linux AppImage + .deb
+```
+
+Output goes to `dist/`.
+
 ## Project Structure
 
 ```
 vortex-launcher/
 ├── launcher.html          # Single-file UI (HTML + CSS + JS)
 ├── package.json
+├── .gitignore
+├── assets/
+│   ├── icon.ico           # App icon (Windows)
+│   ├── icon.png           # App icon (PNG)
+│   ├── icon.svg           # App icon (source)
+│   └── skins/             # Built-in skin PNGs
 ├── src/
 │   ├── main.js            # Electron main process, IPC handlers
 │   ├── preload.js         # Context bridge (renderer ↔ main)
@@ -90,29 +129,12 @@ vortex-launcher/
 │       ├── accounts.js    # Offline account management
 │       ├── settings.js    # Global settings persistence
 │       └── store.js       # JSON file storage
+└── dist/                  # Build output (gitignored)
 ```
 
 ### Data Locations
 - **Launcher config**: `src/data/` (settings.json, accounts.json, instances.json)
 - **Game files**: `~/vortex-launcher/` (versions, libraries, assets, instances, java)
-
-## How It Works
-
-1. **Create an instance** — pick a name, Minecraft version, loader, and icon
-2. **Install content** — browse Modrinth mods or upload files directly
-3. **Hit PLAY** — the launcher downloads everything needed (client JAR, libraries, assets, loader) and starts the game
-4. All paths, classpath construction, and JVM arguments are handled automatically per loader
-
-## Supported Versions
-
-Any version available in the official Minecraft version manifest. Loader support varies by MC version:
-- **Fabric/Quilt**: most modern versions
-- **NeoForge**: 1.20.5+
-- **Forge**: most versions (legacy installer + processor-based for newer)
-
-## Disclaimer
-
-This is a fan-made, unofficial launcher. It is not affiliated with, endorsed by, or connected to Mojang Studios or Microsoft. All Minecraft game content, trademarks, and the Minecraft name belong to Mojang Studios / Microsoft.
 
 ## License
 
