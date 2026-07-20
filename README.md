@@ -84,13 +84,6 @@ All loaders resolve, download, and install automatically at launch time.
 3. **Hit PLAY** — the launcher downloads everything needed (client JAR, libraries, assets, loader) and starts the game
 4. All paths, classpath construction, and JVM arguments are handled automatically per loader
 
-## Supported Versions
-
-Any version available in the official Minecraft version manifest. Loader support varies by MC version:
-- **Fabric/Quilt**: most modern versions
-- **NeoForge**: 1.20.5+
-- **Forge**: most versions (legacy installer + processor-based for newer)
-
 ## Disclaimer
 
 This is a fan-made, unofficial launcher. It is not affiliated with, endorsed by, or connected to Mojang Studios or Microsoft. All Minecraft game content, trademarks, and the Minecraft name belong to Mojang Studios / Microsoft.
