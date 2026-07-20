@@ -23,6 +23,54 @@ function slugify(name) {
 
 async function init() {
   instances = await readJSON(FILE, []);
+
+  // Sync with filesystem: detect instance folders that exist on disk
+  // but aren't tracked in instances.json (e.g. after reinstall or manual copy)
+  try {
+    const os = require('os');
+    const settings = require('./settings');
+    const s = settings.get();
+    const baseDir = (s && s.gameDir) || path.join(os.homedir(), 'vortex-launcher');
+    const instancesDir = path.join(baseDir, 'instances');
+    const dirs = await fs.readdir(instancesDir, { withFileTypes: true }).catch(() => []);
+    const existingSlugs = new Set(instances.map(i => slugify(i.name)));
+    let added = false;
+
+    for (const d of dirs) {
+      if (!d.isDirectory()) continue;
+      const folderSlug = d.name;
+      if (existingSlugs.has(folderSlug)) continue;
+
+      // Infer name from folder slug (e.g. "my-modpack" → "My Modpack")
+      const inferredName = folderSlug
+        .replace(/[-_]+/g, ' ')
+        .replace(/\b\w/g, c => c.toUpperCase())
+        .slice(0, 32);
+
+      instances.push({
+        id: genId(),
+        name: inferredName,
+        version: 'Unknown',
+        loader: 'Unknown',
+        iconColor: '#4fd889',
+        iconImage: null,
+        lastPlayed: null,
+        totalPlaytime: 0,
+        launchCount: 0,
+        mods: [],
+        resourcepacks: [],
+        shaderpacks: [],
+        datapacks: [],
+        saves: [],
+        logs: [],
+        settings: { ram: 4, resolution: '1920 × 1080' }
+      });
+      existingSlugs.add(folderSlug);
+      added = true;
+    }
+
+    if (added) await save();
+  } catch { /* best effort */ }
 }
 
 async function save() {

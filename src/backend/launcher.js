@@ -936,8 +936,39 @@ async function getVersionJSON(versionId) {
 
 // ── Java Detection ────────────────────────────────────────────────────────────
 
+/** Run `java -version` and return the major version number (e.g. 17, 21). */
+function getJavaMajor(javaPath) {
+  return new Promise((resolve) => {
+    const { execFile } = require('child_process');
+    execFile(javaPath, ['-version'], { timeout: 5000 }, (err, _stdout, stderr) => {
+      // java -version outputs to stderr
+      const output = (stderr || '') + (err ? err.message : '');
+      // Match patterns like: version "17.0.15" or version "21.0.3"
+      const m = output.match(/version\s+"(\d+)/);
+      resolve(m ? parseInt(m[1], 10) : 0);
+    });
+  });
+}
+
 async function findJava(mcVersion) {
   const s = settings.get();
+
+  // Determine preferred Java major version based on MC version.
+  // MC < 1.20.5 needs Java 17; MC >= 1.20.5 works with Java 21.
+  const needsJava17 = mcVersion && /^1\.(1[0-9]|20\.[0-4])/.test(mcVersion);
+  const preferredMajor = needsJava17 ? 17 : 21;
+
+  // 1. Check version-specific settings paths first
+  const versionKey = `javaPath${preferredMajor}`;
+  if (s[versionKey]) {
+    try {
+      await fs.access(s[versionKey]);
+      const major = await getJavaMajor(s[versionKey]);
+      if (major === preferredMajor) return s[versionKey];
+    } catch { /* fall through */ }
+  }
+
+  // 2. Legacy single javaPath setting (for migration)
   if (s.javaPath) {
     try {
       await fs.access(s.javaPath);
@@ -948,11 +979,6 @@ async function findJava(mcVersion) {
   const isWin = process.platform === 'win32';
   const isMac = process.platform === 'darwin';
   const exe = isWin ? 'java.exe' : 'java';
-
-  // Determine preferred Java major version based on MC version.
-  // MC < 1.20.5 needs Java 17; MC >= 1.20.5 works with Java 21.
-  const needsJava17 = mcVersion && /^1\.(1[0-9]|20\.[0-4])/.test(mcVersion);
-  const preferredMajor = needsJava17 ? 17 : 21;
   const altMajor = needsJava17 ? 21 : 17;
 
   // Build candidate lists: preferred version first, then alternate
@@ -966,10 +992,13 @@ async function findJava(mcVersion) {
     }
     const roots = [process.env['ProgramFiles'], process.env['ProgramFiles(x86)'], process.env.LOCALAPPDATA].filter(Boolean);
     for (const pf of roots) {
-      // Minecraft bundled runtimes
-      preferred.push(path.join(pf, 'Minecraft', 'runtime', 'java-runtime-gamma', 'windows-x64', 'java-runtime-gamma', 'bin', 'javaw.exe'));
-      preferred.push(path.join(pf, 'Minecraft', 'runtime', 'java-runtime-beta', 'windows-x64', 'java-runtime-beta', 'bin', 'javaw.exe'));
-      preferred.push(path.join(pf, 'Minecraft', 'runtime', 'java-runtime-alpha', 'windows-x64', 'java-runtime-alpha', 'bin', 'javaw.exe'));
+      // Minecraft bundled runtimes — order by preference (newest first for MC >= 1.20.5)
+      const mcRuntimes = preferredMajor >= 21
+        ? ['java-runtime-beta', 'java-runtime-gamma', 'java-runtime-alpha']
+        : ['java-runtime-gamma', 'java-runtime-beta', 'java-runtime-alpha'];
+      for (const rt of mcRuntimes) {
+        preferred.push(path.join(pf, 'Minecraft', 'runtime', rt, 'windows-x64', rt, 'bin', 'javaw.exe'));
+      }
       // Oracle / Adoptium / Temurin / Zulu — prefer matching version
       preferred.push(path.join(pf, 'Java', `jdk-${preferredMajor}`, 'bin', exe));
       alternate.push(path.join(pf, 'Java', `jdk-${altMajor}`, 'bin', exe));
@@ -988,7 +1017,7 @@ async function findJava(mcVersion) {
         }
       } catch { /* dir doesn't exist */ }
     }
-    // PrismLauncher / AstralRinthApp managed Java — sort by version
+    // PrismLauncher / AstralRinthApp managed Java — extract major version from dir name
     const appData = process.env.APPDATA;
     if (appData) {
       const jreRoot = path.join(appData, 'AstralRinthApp', 'meta', 'java_versions');
@@ -997,7 +1026,10 @@ async function findJava(mcVersion) {
         for (const d of dirs) {
           if (d.includes('zulu') || d.includes('jdk') || d.includes('jre')) {
             const full = path.join(jreRoot, d, 'bin', 'javaw.exe');
-            if (d.includes(`${preferredMajor}`)) {
+            // Extract major version: "zulu17.58.21" → 17, "jdk-21.0.8" → 21
+            const verMatch = d.match(/(?:zulu|jdk|jre)[_-]?(\d+)/);
+            const major = verMatch ? parseInt(verMatch[1], 10) : 0;
+            if (major === preferredMajor) {
               preferred.push(full);
             } else {
               alternate.push(full);
@@ -1025,7 +1057,21 @@ async function findJava(mcVersion) {
     alternate.push(`/usr/lib/jvm/java-${altMajor}/bin/java`);
   }
 
-  // Try preferred version first, then alternate, then bare exe
+  // Scan all candidates and verify actual Java version
+  let firstFound = null; // last resort: first binary that exists (even wrong version)
+  for (const candidate of [...preferred, ...alternate, exe]) {
+    try {
+      await fs.access(candidate);
+      const major = await getJavaMajor(candidate);
+      if (major === preferredMajor) return candidate;
+      if (!firstFound && major > 0) firstFound = candidate;
+    } catch { /* try next */ }
+  }
+
+  // If we found Java but not the right version, warn and return it anyway
+  if (firstFound) return firstFound;
+
+  // Absolute fallback
   for (const candidate of [...preferred, ...alternate, exe]) {
     try {
       await fs.access(candidate);
@@ -1163,7 +1209,9 @@ async function launch(instanceId, mainWindow) {
 
     if (loader === 'Fabric') {
       sendLog('Fetching Fabric loader profile…');
-      versionJSON = await getFabricVersionJSON(inst.version);
+      const fabricLoaderVer = inst.fabricLoaderVersion || null;
+      if (fabricLoaderVer) sendLog(`Using Fabric loader ${fabricLoaderVer} from modpack manifest`);
+      versionJSON = await getFabricVersionJSON(inst.version, fabricLoaderVer);
       sendLog(`Fabric loader installed: ${versionJSON.id}`);
     } else if (loader === 'Quilt') {
       sendLog('Fetching Quilt loader profile…');
@@ -1188,7 +1236,15 @@ async function launch(instanceId, mainWindow) {
 
     // 3. Find Java
     const javaPath = await findJava(inst.version);
-    sendLog(`Using Java: ${javaPath}`);
+    const needsJava17 = inst.version && /^1\.(1[0-9]|20\.[0-4])/.test(inst.version);
+    const requiredMajor = needsJava17 ? 17 : 21;
+    const actualMajor = await getJavaMajor(javaPath);
+    sendLog(`Using Java: ${javaPath} (major version: ${actualMajor})`);
+    if (actualMajor !== requiredMajor && actualMajor > 0) {
+      sendLog(`WARNING: Java ${requiredMajor} is required for Minecraft ${inst.version}, but Java ${actualMajor} was found. The game may not start.`);
+      sendState('error', `Java ${requiredMajor} required for Minecraft ${inst.version}, but Java ${actualMajor} was found at: ${javaPath}. Please install Java ${requiredMajor} in Settings.`);
+      return { error: `Java ${requiredMajor} required, found Java ${actualMajor}` };
+    }
 
     // 4. Build classpath
     const baseDir = getBaseDir();
@@ -1211,6 +1267,9 @@ async function launch(instanceId, mainWindow) {
       classpathEntries.push(jarPath);
     }
     const classpath = classpathEntries.join(process.platform === 'win32' ? ';' : ':');
+    if (!classpath) {
+      sendLog('WARNING: Classpath is empty! This will cause JVM errors.');
+    }
 
     // 5. Build game arguments
     const s = settings.get();
@@ -1315,7 +1374,7 @@ async function launch(instanceId, mainWindow) {
       }
     }
 
-    // Memory args (before main class, after version JSON JVM args)
+    // Memory args
     fullArgs.push(`-Xmx${ram}G`);
     fullArgs.push(`-Xms${Math.min(ram, 2)}G`);
 
@@ -1361,8 +1420,43 @@ async function launch(instanceId, mainWindow) {
     sendLog('Starting game process…');
     sendLog(`Java: ${javaPath}`);
     sendLog(`Working directory: ${instanceDir}`);
+    sendLog(`JVM args count: ${fullArgs.length}`);
+    sendLog(`Main class: ${mainClass}`);
+    sendLog(`Classpath entries: ${classpathEntries.length}`);
 
-    const gameProcess = spawn(javaPath, fullArgs, {
+    // Validate: check java exists
+    try {
+      await fs.access(javaPath);
+    } catch {
+      sendLog(`ERROR: Java not found at "${javaPath}"`);
+      sendState('error', `Java not found at "${javaPath}". Please install Java or set the path in Settings.`);
+      return { error: `Java not found at ${javaPath}` };
+    }
+
+    // On Windows, command-line limit is 32767 chars. NeoForge can easily exceed
+    // this with 300+ library paths. Use an @argfile to bypass the limit.
+    let spawnArgs;
+    let argFile = null;
+    const estimatedLen = fullArgs.reduce((s, a) => s + String(a).length + 1, 0) + javaPath.length;
+    if (process.platform === 'win32' && estimatedLen > 30000) {
+      argFile = path.join(versionDir, 'launch_args.txt');
+      await fs.mkdir(path.dirname(argFile), { recursive: true });
+      await fs.writeFile(argFile, fullArgs.join('\n'), 'utf-8');
+      spawnArgs = [`@${argFile}`];
+      sendLog(`Command line too long (${estimatedLen} chars), using @argfile`);
+    } else {
+      spawnArgs = fullArgs;
+    }
+
+    // Log args for debugging (truncate long classpath)
+    const debugArgs = spawnArgs.map(a => {
+      const s = String(a);
+      if (s.length > 200) return s.substring(0, 100) + '...[truncated]';
+      return s;
+    });
+    sendLog(`Full command: ${javaPath} ${debugArgs.join(' ')}`);
+
+    const gameProcess = spawn(javaPath, spawnArgs, {
       cwd: instanceDir,
       stdio: ['pipe', 'pipe', 'pipe']
     });
@@ -1391,6 +1485,7 @@ async function launch(instanceId, mainWindow) {
       clearTimeout(earlyExitTimer);
       runningProcesses.delete(instanceId);
       instancesModule.markStopped(instanceId);
+      if (argFile) { try { fsSync.unlinkSync(argFile); } catch {} }
       sendLog(`Game exited with code ${code}`);
       if (earlyExit || code !== 0) {
         sendState('error', `Game exited immediately with code ${code}. Check instance logs and verify Java is installed correctly.`);
@@ -1402,6 +1497,7 @@ async function launch(instanceId, mainWindow) {
     gameProcess.on('error', (err) => {
       clearTimeout(earlyExitTimer);
       runningProcesses.delete(instanceId);
+      if (argFile) { try { fsSync.unlinkSync(argFile); } catch {} }
       sendLog(`Process error: ${err.message}`);
       if (err.message.includes('ENOENT')) {
         sendState('error', `Java not found at "${javaPath}". Please install Java or set the Java path in Settings.`);
@@ -1560,36 +1656,134 @@ async function installModpack(mrpackUrl, projectId, title, icon, apiGameVersion,
   //    read the manifest, not the API game_versions which may be wrong.
   const LOADER_MAP = { fabric: 'Fabric', forge: 'Forge', neoforge: 'NeoForge', quilt: 'Quilt' };
 
+  log(`[DEBUG] manifest.dependencies: ${JSON.stringify(manifest.dependencies)}`);
+  log(`[DEBUG] apiGameVersion: ${apiGameVersion}`);
+  log(`[DEBUG] manifest.game: ${manifest.game}`);
+
   let mcVersion = '';
-  // Prefer manifest dependencies.minecraft (actual MC version the modpack targets)
+  // 1. Prefer manifest dependencies.minecraft (source of truth)
   if (manifest.dependencies && manifest.dependencies.minecraft) {
     mcVersion = manifest.dependencies.minecraft;
+    log(`[DEBUG] mcVersion from manifest.dependencies.minecraft: ${mcVersion}`);
   }
-  // Fall back to API value if manifest doesn't have it
+  // 2. Fall back to API value
   if (!mcVersion && apiGameVersion && apiGameVersion !== 'Unknown') {
     mcVersion = apiGameVersion;
+    log(`[DEBUG] mcVersion from apiGameVersion: ${mcVersion}`);
   }
-  // Fall back to manifest game field
+  // 3. Fall back to manifest game field
   if (!mcVersion && manifest.game && manifest.game !== 'Unknown') {
     mcVersion = manifest.game;
+    log(`[DEBUG] mcVersion from manifest.game: ${mcVersion}`);
   }
   // Clean up version ranges like "[1.21,1.22)" or "[26.2,26.3)" -> extract the lower bound
   mcVersion = mcVersion.replace(/^[\[\(]/, '').split(',')[0].replace(/[\]\)\+]$/, '');
+
   // Validate — MC versions are like "1.21.1" or "26.2"
-  if (!mcVersion || !/^\d+\.\d+/.test(mcVersion)) {
+  const validVersion = (v) => /^\d+\.\d+/.test(v);
+
+  // 4. If still no valid version, detect from modpack name/title
+  if (!mcVersion || !validVersion(mcVersion)) {
+    const nameSources = [title, manifest.name, manifest.summary, manifest.versionId];
+    const namePatterns = [
+      /[_\s-]mc(\d+\.\d+(?:\.\d+)?)/i,
+      /[_\s-](\d+\.\d+\.\d+)/,
+      /[_\s-](\d+\.\d+)[_\s-]/,
+      /[:(\s](\d+\.\d+(?:\.\d+)?)[:)\s]/,
+    ];
+    for (const name of nameSources) {
+      if (!name) continue;
+      for (const pat of namePatterns) {
+        const m = name.match(pat);
+        if (m && m[1] && validVersion(m[1])) {
+          mcVersion = m[1];
+          log(`[DEBUG] Detected MC version from name "${name}": ${mcVersion}`);
+          break;
+        }
+      }
+      if (mcVersion && validVersion(mcVersion)) break;
+    }
+  }
+
+  // 5. If still no valid version, detect from mod filenames (most common version wins)
+  if (!mcVersion || !validVersion(mcVersion)) {
+    log(`[DEBUG] No valid version from manifest/API/name, detecting from mod filenames…`);
+    const files = manifest.files || [];
+    const versionCounts = {};
+    const versionPatterns = [
+      /[_-]mc(\d+\.\d+(?:\.\d+)?)/i,           // mc1.20.1, mc1.21
+      /[_-](\d+\.\d+\.\d+)[+._-]/,              // 1.20.1+, 1.20.1-
+      /[_-](\d+\.\d+)[+._-]/,                    // 1.20-, 1.20+
+      /fabric[_-](\d+\.\d+(?:\.\d+)?)/i,         // fabric-1.20.1
+      /forge[_-](\d+\.\d+(?:\.\d+)?)/i,          // forge-1.20.1
+      /[_-](\d+\.\d+(?:\.\d+)?)\.jar$/i,         // SomeMod-1.20.1.jar
+      /[_-]v?(\d+\.\d+\.\d+)/i,                   // v1.20.1
+    ];
+    for (const file of files) {
+      const filePath = file.path || '';
+      for (const pat of versionPatterns) {
+        const m = filePath.match(pat);
+        if (m && m[1]) {
+          const ver = m[1];
+          // Only count plausible MC versions (1.x.x or big numbers like 26.x)
+          if (/^\d+\.\d+/.test(ver)) {
+            versionCounts[ver] = (versionCounts[ver] || 0) + 1;
+          }
+        }
+      }
+    }
+    // Pick the version with the highest count
+    const sorted = Object.entries(versionCounts).sort((a, b) => b[1] - a[1]);
+    if (sorted.length > 0) {
+      mcVersion = sorted[0][0];
+      log(`[DEBUG] Detected MC version from filenames: ${mcVersion} (${sorted[0][1]} matches)`);
+      log(`[DEBUG] All candidates: ${sorted.map(([v, c]) => `${v}(${c})`).join(', ')}`);
+    }
+  }
+
+  // Final fallback
+  if (!mcVersion || !validVersion(mcVersion)) {
+    log(`[DEBUG] All detection failed, using fallback 1.21.1`);
     mcVersion = '1.21.1';
   }
+  log(`[DEBUG] Final mcVersion: ${mcVersion}`);
 
   let loaderRaw = apiLoaderRaw || '';
   if (!loaderRaw && manifest.loaders && manifest.loaders.length) {
     loaderRaw = manifest.loaders[0];
   }
   const loaderName = LOADER_MAP[(loaderRaw || '').toLowerCase()] || 'Vanilla';
-  log(`Modpack: MC ${mcVersion}, loader ${loaderName}`);
+
+  // Extract Fabric loader version from dependencies if available
+  let fabricLoaderVersion = null;
+  if (manifest.dependencies && manifest.dependencies['fabric-loader']) {
+    fabricLoaderVersion = manifest.dependencies['fabric-loader'];
+    log(`[DEBUG] Fabric loader version from manifest: ${fabricLoaderVersion}`);
+  }
+  // Fallback: detect fabric-loader version from filenames like fabric-loader-0.19.2
+  if (!fabricLoaderVersion) {
+    const files = manifest.files || [];
+    for (const file of files) {
+      const filePath = file.path || '';
+      const m = filePath.match(/fabric-loader[_-]?(\d+\.\d+\.\d+)/i);
+      if (m && m[1]) {
+        fabricLoaderVersion = m[1];
+        log(`[DEBUG] Detected fabric-loader version from filename: ${fabricLoaderVersion}`);
+        break;
+      }
+    }
+  }
+
+  log(`Modpack: MC ${mcVersion}, loader ${loaderName}${fabricLoaderVersion ? `, fabric-loader ${fabricLoaderVersion}` : ''}`);
 
   // 4. Create instance
   log('Creating instance…');
   const inst = await instancesModule.create(title.slice(0, 32), mcVersion, loaderName, null, icon);
+  // Store fabric-loader version from manifest so launch uses the correct version
+  if (fabricLoaderVersion) {
+    inst.fabricLoaderVersion = fabricLoaderVersion;
+    await instancesModule.update(inst.id, { fabricLoaderVersion });
+  }
   const instanceDir = getInstanceDir(inst.id);
   await fs.mkdir(instanceDir, { recursive: true });
 

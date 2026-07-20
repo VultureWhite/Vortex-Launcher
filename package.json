@@ -1,7 +1,7 @@
 {
   "name": "vortex-launcher",
-  "version": "0.1.0-alpha",
-  "description": "Vortex Launcher — Unofficial Minecraft Launcher",
+  "version": "0.2.0",
+  "description": "A lightweight, multi-loader Minecraft launcher built with Electron. Supports Fabric, Forge, NeoForge, and Quilt mod loaders with one-click modpack installation from Modrinth.",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",

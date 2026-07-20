@@ -235,9 +235,9 @@ app.whenReady().then(async () => {
     }
   } catch {}
 
+  await settings.init();
   await instances.init();
   await accounts.init();
-  await settings.init();
   createWindow();
 });
 

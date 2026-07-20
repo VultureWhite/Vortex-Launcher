@@ -12,7 +12,9 @@ const DEFAULTS = {
   defaultResolution: '1920 × 1080',
   keepOpenAfterLaunch: false,
   showSnapshots: false,
-  javaPath: '',        // empty = auto-detect
+  javaPath: '',        // legacy — kept for migration
+  javaPath17: '',      // Java 17 path (MC < 1.20.5)
+  javaPath21: '',      // Java 21 path (MC >= 1.20.5)
   gameDir: '',         // empty = default .minecraft location
   jvmArgs: '',
   width: 854,
@@ -25,6 +27,12 @@ async function init() {
   const saved = await readJSON(FILE, null);
   if (saved) {
     data = { ...DEFAULTS, ...saved };
+    // Migrate legacy javaPath → javaPath17/javaPath21 if new fields are empty
+    if (saved.javaPath && !data.javaPath17 && !data.javaPath21) {
+      data.javaPath17 = saved.javaPath;
+      data.javaPath21 = saved.javaPath;
+      await save();
+    }
   } else {
     await save();
   }

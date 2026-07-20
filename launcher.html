@@ -1305,7 +1305,18 @@
       <div class="panel-sub">Changes to Vortex Launcher itself — not Minecraft.</div>
 
       <div class="changelog-entry">
-        <div class="changelog-version" id="changelogVersion">v0.1.0-alpha <span class="changelog-date">Latest</span></div>
+        <div class="changelog-version">v0.1.0 Bugfix <span class="changelog-date">July 20, 2026</span></div>
+        <ul class="changelog-list">
+          <li>Fixed username bug — removed hardcoded Steve/Alex defaults; Enter key now works in account name input.</li>
+          <li>Fixed Java version mismatch — launcher now detects and verifies the actual Java version instead of guessing, and refuses to launch with the wrong version.</li>
+          <li>Fixed instances not detected — modpacks and instances properly appear in the launcher.</li>
+          <li>Added per-version Java settings — separate Java 17 and Java 21 paths with Browse and auto-detect.</li>
+          <li>Added @argfile support — fixes launches with very long command lines (NeoForge) on Windows.</li>
+        </ul>
+      </div>
+
+      <div class="changelog-entry">
+        <div class="changelog-version">v0.1.0 Alpha <span class="changelog-date">Initial Release</span></div>
         <ul class="changelog-list">
           <li>Instance system — create named instances, each with its own version, loader, mods, resource packs, saves and settings.</li>
           <li>Multi-loader support — Fabric, Forge, NeoForge, Quilt, and Vanilla.</li>
@@ -1365,12 +1376,22 @@
       <div class="card" style="margin-top:14px;">
         <div class="card-row">
           <div>
-            <div class="row-label">Java path</div>
-            <div class="row-hint" id="javaDetectHint">Detecting…</div>
+            <div class="row-label">Java 21 path (MC ≥ 1.20.5)</div>
+            <div class="row-hint" id="java21DetectHint">Detecting…</div>
           </div>
           <div style="display:flex;gap:6px;align-items:center;">
-            <input type="text" id="javaPathInput" style="width:280px;" placeholder="Auto-detect">
-            <button class="btn-ghost" id="javaBrowseBtn" style="white-space:nowrap;">Browse…</button>
+            <input type="text" id="javaPath21Input" style="width:280px;" placeholder="Auto-detect">
+            <button class="btn-ghost" id="java21BrowseBtn" style="white-space:nowrap;">Browse…</button>
+          </div>
+        </div>
+        <div class="card-row">
+          <div>
+            <div class="row-label">Java 17 path (MC < 1.20.5)</div>
+            <div class="row-hint" id="java17DetectHint">Detecting…</div>
+          </div>
+          <div style="display:flex;gap:6px;align-items:center;">
+            <input type="text" id="javaPath17Input" style="width:280px;" placeholder="Auto-detect">
+            <button class="btn-ghost" id="java17BrowseBtn" style="white-space:nowrap;">Browse…</button>
           </div>
         </div>
         <div class="card-row">
@@ -1462,10 +1483,7 @@
 <script>
 (function(){
   const state = {
-    accounts: [
-      { name: "Steve", color: "#c4863a" },
-      { name: "Alex",  color: "#e3ad6f" }
-    ],
+    accounts: [],
     activeAccountId: null,
     versions: [],
     launching: false,
@@ -1514,6 +1532,7 @@
     launchInstance: (id) => hasBackend() ? window.api.launchInstance(id) : Promise.resolve({ error: 'Not running inside the desktop app.' }),
     stopInstance: (id) => hasBackend() ? window.api.stopInstance(id) : Promise.resolve({ stopped: false }),
     quitApp: () => hasBackend() ? window.api.quitApp() : Promise.resolve(null),
+    getVersion: () => hasBackend() ? window.api.getVersion() : Promise.resolve(null),
     resolveFabricVersion: (mcVersion, loaderVersion) => hasBackend() ? window.api.resolveFabricVersion(mcVersion, loaderVersion) : Promise.resolve({ error: 'Not running inside the desktop app.' }),
     resolveQuiltVersion: (mcVersion, loaderVersion) => hasBackend() ? window.api.resolveQuiltVersion(mcVersion, loaderVersion) : Promise.resolve({ error: 'Not running inside the desktop app.' }),
     resolveNeoForgeVersion: (mcVersion, neoForgeVersion) => hasBackend() ? window.api.resolveNeoForgeVersion(mcVersion, neoForgeVersion) : Promise.resolve({ error: 'Not running inside the desktop app.' }),
@@ -1546,6 +1565,7 @@
 
   async function initFromBackend(){
     if(!hasBackend()) return;
+    try{
     const [accs, active, insts, settingsData, ver] = await Promise.all([
       Backend.getAccounts(), Backend.getActiveAccount(), Backend.getInstances(), Backend.getSettings(), Backend.getVersion()
     ]);
@@ -1568,6 +1588,12 @@
     renderHomeRecents();
     renderInstanceBar();
     applyLoadedSettingsToUI();
+    }catch(err){
+      console.error('initFromBackend failed:', err);
+      renderInstancesView();
+      renderHomeRecents();
+      renderInstanceBar();
+    }
   }
 
   function applyLoadedSettingsToUI(){
@@ -1582,30 +1608,42 @@
     document.getElementById('keepOpenSwitch').classList.toggle('on', !!s.keepOpenAfterLaunch);
     document.getElementById('snapshotSwitch').classList.toggle('on', !!s.showSnapshots);
     state.showSnapshots = !!s.showSnapshots;
-    // Java path
-    document.getElementById('javaPathInput').value = s.javaPath || '';
-    detectAndShowJava();
+    // Java paths
+    document.getElementById('javaPath21Input').value = s.javaPath21 || '';
+    document.getElementById('javaPath17Input').value = s.javaPath17 || '';
+    detectAndShowJava('21');
+    detectAndShowJava('17');
     // Game directory
     document.getElementById('dirInput').value = s.gameDir || '';
     // JVM args
     document.getElementById('jvmArgsInput').value = s.jvmArgs || '';
   }
 
-  async function detectAndShowJava(){
-    const hint = document.getElementById('javaDetectHint');
-    const input = document.getElementById('javaPathInput');
+  async function detectAndShowJava(major){
+    const hint = document.getElementById('java' + major + 'DetectHint');
+    const input = document.getElementById('javaPath' + major + 'Input');
     hint.textContent = 'Detecting…';
     try {
-      const info = await Backend.detectJava();
-      if (info && info.available) {
+      const info = await Backend.detectJava(major === '21' ? '1.21' : '1.20.4');
+      if (info && info.available && String(info.major || info.version).startsWith(major)) {
         hint.textContent = `Found: Java ${info.version} (${info.path})`;
         hint.style.color = '';
+      } else if (input.value) {
+        // Check the manually set path
+        const manualInfo = await Backend.getJavaInfo(input.value);
+        if (manualInfo && manualInfo.available) {
+          hint.textContent = `Found: Java ${manualInfo.version} (${input.value})`;
+          hint.style.color = '';
+        } else {
+          hint.textContent = `Path not found: ${input.value}`;
+          hint.style.color = 'var(--danger)';
+        }
       } else {
-        hint.textContent = input.value ? `Path not found: ${input.value}` : 'No Java found. Please browse or download.';
+        hint.textContent = 'No Java ' + major + ' found. Browse or download.';
         hint.style.color = 'var(--danger)';
       }
     } catch {
-      hint.textContent = 'Could not detect Java.';
+      hint.textContent = 'Could not detect Java ' + major + '.';
       hint.style.color = 'var(--danger)';
     }
   }
@@ -1701,6 +1739,12 @@
     state.accounts.push(acc);
     input.value = '';
     renderAccountsList();
+  });
+  document.getElementById('newAccName').addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      document.getElementById('addAccBtn').click();
+    }
   });
 
   const viewTitles = { home: 'Play', instances: 'Instances', modpacks: 'Modpacks', skins: 'Skins', accounts: 'Accounts', whatsnew: "What's New", settings: 'Settings' };
@@ -2670,17 +2714,30 @@
     await Backend.updateSettings({ jvmArgs: this.value.trim() });
   });
 
-  // Java management
-  document.getElementById('javaPathInput').addEventListener('change', async function(){
-    await Backend.updateSettings({ javaPath: this.value.trim() });
-    detectAndShowJava();
+  // Java management — Java 21
+  document.getElementById('javaPath21Input').addEventListener('change', async function(){
+    await Backend.updateSettings({ javaPath21: this.value.trim() });
+    detectAndShowJava('21');
   });
-  document.getElementById('javaBrowseBtn').addEventListener('click', async function(){
+  document.getElementById('java21BrowseBtn').addEventListener('click', async function(){
     const filePath = await Backend.browseJava();
     if (filePath) {
-      document.getElementById('javaPathInput').value = filePath;
-      await Backend.updateSettings({ javaPath: filePath });
-      detectAndShowJava();
+      document.getElementById('javaPath21Input').value = filePath;
+      await Backend.updateSettings({ javaPath21: filePath });
+      detectAndShowJava('21');
+    }
+  });
+  // Java management — Java 17
+  document.getElementById('javaPath17Input').addEventListener('change', async function(){
+    await Backend.updateSettings({ javaPath17: this.value.trim() });
+    detectAndShowJava('17');
+  });
+  document.getElementById('java17BrowseBtn').addEventListener('click', async function(){
+    const filePath = await Backend.browseJava();
+    if (filePath) {
+      document.getElementById('javaPath17Input').value = filePath;
+      await Backend.updateSettings({ javaPath17: filePath });
+      detectAndShowJava('17');
     }
   });
   document.getElementById('javaDownloadBtn').addEventListener('click', async function(){
@@ -2714,9 +2771,14 @@
         hint.textContent = `Done! Java ${result?.version || ''} installed.`;
         hint.style.color = '';
         // Update path
-        document.getElementById('javaPathInput').value = result.path || '';
-        await Backend.updateSettings({ javaPath: result.path || '' });
-        detectAndShowJava();
+        const major = result && result.version ? String(result.version).split('.')[0] : '21';
+        const inputId = 'javaPath' + major + 'Input';
+        const inputEl = document.getElementById(inputId);
+        if (inputEl) {
+          inputEl.value = result.path || '';
+        }
+        await Backend.updateSettings({ ['javaPath' + major]: result.path || '' });
+        detectAndShowJava(major);
       }
     } catch (err) {
       removeProgress();
