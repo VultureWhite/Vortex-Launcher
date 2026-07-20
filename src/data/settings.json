@@ -1,0 +1,12 @@
+{
+  "theme": "dark",
+  "defaultRam": 4,
+  "defaultResolution": "1920 × 1080",
+  "keepOpenAfterLaunch": false,
+  "showSnapshots": false,
+  "javaPath": "",
+  "gameDir": "",
+  "jvmArgs": "",
+  "width": 854,
+  "height": 480
+}

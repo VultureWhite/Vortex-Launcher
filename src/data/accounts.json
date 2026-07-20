@@ -1,0 +1,12 @@
+{
+  "accounts": [
+    {
+      "id": "acc_1784235635910_3257",
+      "name": "Vulture",
+      "color": "#e3ad6f",
+      "faceThumb": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAT5JREFUeF7tmi0OwkAQhXcVJCgSBAmGA+B6Eyx3QGDRWAQHweG4Qh0HwJAgIBgQKDgBb8Rk0rL9are7ad++n5lt8/3Q/yRxLXs3NZx275Ecb/v8DAAwAAngAZggKfAbgbbHmDeGzRiUIV/AIABYhVABmyxfAQbAAKMURgKFI4AHLI5P2QtMx4O/5sD5+tIpAAAwAAngAcolMEFSoOMxuKp8AOwvvjJiPvHN39bOOgAAYAAScIkQD8AEXQRKpEDbY7AaZrnF65NsNUx6bGZ6/fqh1w+vAwAABiABPEAhgAmSAn8egxyJcSTma4fNUi/4Br4M8WnMeSaICWKCmKD0aatfDzb5ZJXa4SkAAMaJDQwIRgAJGN0mHhBdCWKCpZtgsIc1vny2/hNs/AmDHwAAYIDxp2gwAxtfHgkggY5L4As4SN/I9UimxwAAAABJRU5ErkJggg==",
+      "skinFile": "Vulture.png"
+    }
+  ],
+  "activeAccountId": "acc_1784235635910_3257"
+}

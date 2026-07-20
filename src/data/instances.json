@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "inst_1784099920034_8758",
+    "name": "F",
+    "version": "1.21.1",
+    "loader": "NeoForge",
+    "iconColor": "#7ac47a",
+    "iconImage": null,
+    "lastPlayed": 1784206669947,
+    "mods": [
+      {
+        "projectId": "1bokaNcj",
+        "title": "Xaero's Minimap",
+        "icon": "https://cdn.modrinth.com/data/1bokaNcj/354080f65407e49f486fcf9c4580e82c45ae63b8_96.webp",
+        "version": "neoforge-1.21.1-26.3.0",
+        "fileName": "xaerominimap-neoforge-1.21.1-26.3.0.jar"
+      }
+    ],
+    "resourcepacks": [
+      {
+        "projectId": "50dA9Sha",
+        "title": "Fresh Animations",
+        "icon": "https://cdn.modrinth.com/data/50dA9Sha/3132c10e9e3c73fde9799720fd3da5561071708c_96.webp",
+        "version": "1.10.4",
+        "fileName": "FreshAnimations_v1.10.4.zip"
+      }
+    ],
+    "shaderpacks": [],
+    "datapacks": [],
+    "saves": [],
+    "logs": [
+      "[۱۹:۱۷:۵۵] NeoForge loader installed: neoforge-21.1.235",
+      "[۱۹:۱۸:۱۲] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۱۹:۱۸:۱۲] Starting game process…",
+      "[۱۹:۱۸:۱۲] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۱۹:۱۸:۱۲] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۱۹:۱۸:۱۲] Game process started.",
+      "[۱۹:۱۸:۱۶] [19:18:16.267] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.235, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.235, --fml.fmlVersion, 4.0.42, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۱۹:۱۸:۱۶] [19:18:16.272] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۱۹:۱۸:۱۶] [19:18:16.285] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۱۹:۱۸:۱۶] [19:18:16.568] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۱۹:۱۸:۱۶] [19:18:16.831] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۱۹:۱۸:۱۷] [19:18:17.137] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۱۹:۱۸:۱۷] [19:18:17.328] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23207!/ Service=ModLauncher Env=CLIENT \r",
+      "[۱۹:۱۸:۱۷] [19:18:17.604] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۱۹:۱۸:۱۷] [19:18:17.985] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.235:client] \r",
+      "[۱۹:۱۸:۱۸] [19:18:18.024] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"neoforge-21.1.235-universal.jar\" [locator: PathBasedLocator[name=neoforge, paths=[C:\\Users\\Amirsam\\vortex-launcher\\libraries\\net\\neoforged\\neoforge\\21.1.235\\neoforge-21.1.235-universal.jar]], reader: mod manifest] \r",
+      "[۱۹:۱۸:۱۸] [19:18:18.267] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection \r",
+      "[۱۹:۱۸:۱۸] [19:18:18.268] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file \"mixinextras-neoforge-0.5.3.jar\" [parent: neoforge-21.1.235-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۱۹:۱۸:۱۸] [19:18:18.268] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found library file \"net.neoforged.neoforge-coremods-21.1.235.jar\" [parent: neoforge-21.1.235-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۱۹:۱۸:۱۸] [19:18:18.269] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۱۹:۱۸:۱۸]      Mod List:",
+      "[۱۹:۱۸:۱۸] \t\tName Version (Mod Id)",
+      "[۱۹:۱۸:۱۸] \t\tMinecraft 1.21.1 (minecraft)",
+      "[۱۹:۱۸:۱۸] \t\tNeoForge 21.1.235 (neoforge) \r",
+      "[۱۹:۱۸:۱۸] Exception in thread \"main\" java.lang.module.ResolutionException: Modules minecraft and neoforge export package net.minecraft.client.particle to module mixinextras.neoforge\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900)\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:814)\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735)\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380)\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139)\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)\r",
+      "[۱۹:۱۸:۱۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210)\r",
+      "[۱۹:۱۸:۱۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69)\r",
+      "[۱۹:۱۸:۱۸] [19:18:18.921] [main/ERROR] [ModuleLayerHandler/]: Error while resolving modules. java.lang.module.ResolutionException: Modules minecraft and neoforge export package net.minecraft.client.particle to module mixinextras.neoforge\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:814) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493) ~[?:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۱۹:۱۸:۱۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۱۹:۱۸:۱۸] \r",
+      "[۱۹:۱۸:۱۹] Game exited with code 1",
+      "[۲۱:۰۰:۴۹] Launch requested for F (1.21.1, NeoForge).",
+      "[۲۱:۰۰:۴۹] Resolving version 1.21.1…",
+      "[۲۱:۰۰:۴۹] Fetching NeoForge loader profile…",
+      "[۲۱:۰۱:۲۹] Extracting binary patches from installer…",
+      "[۲۱:۰۱:۲۹] Downloading processor dependencies…",
+      "[۲۱:۰۱:۳۸] Mojmaps already present.",
+      "[۲۱:۰۱:۳۸] Running processor 3: MCP_DATA…",
+      "[۲۱:۰۱:۳۹] Running processor 4: DOWNLOAD_MOJMAPS…",
+      "[۲۱:۰۱:۳۹] Skipping DOWNLOAD_MOJMAPS — already fetched.",
+      "[۲۱:۰۱:۳۹] Running processor 5: MERGE_MAPPING…",
+      "[۲۱:۰۱:۴۱] Running processor 6: {MINECRAFT_JAR}…",
+      "[۲۱:۰۱:۴۶] Running processor 8: {MC_SLIM}…",
+      "[۲۱:۰۱:۵۰] Running processor 9: {MC_SRG}…",
+      "[۲۱:۰۱:۵۷] Injecting MANIFEST.MF into patched JAR…",
+      "[۲۱:۰۱:۵۸] MANIFEST.MF injected successfully.",
+      "[۲۱:۰۱:۵۸] All processors completed successfully.",
+      "[۲۱:۰۱:۵۸] NeoForge loader installed: neoforge-21.1.236",
+      "[۲۱:۰۲:۰۱] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۱:۰۲:۰۱] Starting game process…",
+      "[۲۱:۰۲:۰۱] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۱:۰۲:۰۱] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۲۱:۰۲:۰۱] Game process started.",
+      "[۲۱:۰۲:۰۳] [21:02:03.911] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۲۱:۰۲:۰۳] [21:02:03.916] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۲۱:۰۲:۰۳] [21:02:03.919] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.035] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.162] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.326] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.414] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23207!/ Service=ModLauncher Env=CLIENT \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.638] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.865] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.919] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping! \r",
+      "[۲۱:۰۲:۰۴] [21:02:04.921] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۲۱:۰۲:۰۴]      Mod List:",
+      "[۲۱:۰۲:۰۴] \t\tName Version (Mod Id)",
+      "[۲۱:۰۲:۰۴] \t\tMinecraft 1.21.1 (minecraft) \r",
+      "[۲۱:۰۲:۰۵] [21:02:05.117] [main/ERROR] [ModuleLayerHandler/]: Error while resolving modules. java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.world.entity.animal.horse, module neoforge exports package net.minecraft.world.entity.animal.horse to minecraft\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493) ~[?:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۱:۰۲:۰۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۱:۰۲:۰۵] \r",
+      "[۲۱:۰۲:۰۵] Exception in thread \"main\" ",
+      "[۲۱:۰۲:۰۵] java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.world.entity.animal.horse, module neoforge exports package net.minecraft.world.entity.animal.horse to minecraft\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900)\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806)\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735)\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380)\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139)\r",
+      "[۲۱:۰۲:۰۵] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)\r",
+      "[۲۱:۰۲:۰۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)\r",
+      "[۲۱:۰۲:۰۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210)\r",
+      "[۲۱:۰۲:۰۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69)\r",
+      "[۲۱:۰۲:۰۵] Game exited with code 1",
+      "[۲۱:۰۲:۴۷] Launch requested for F (1.21.1, NeoForge).",
+      "[۲۱:۰۲:۴۷] Resolving version 1.21.1…",
+      "[۲۱:۰۲:۴۷] Fetching NeoForge loader profile…",
+      "[۲۱:۰۲:۵۱] NeoForge loader installed: neoforge-21.1.236",
+      "[۲۱:۰۲:۵۲] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۱:۰۲:۵۲] Starting game process…",
+      "[۲۱:۰۲:۵۲] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۱:۰۲:۵۲] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۲۱:۰۲:۵۲] Game process started.",
+      "[۲۱:۰۲:۵۳] [21:02:53.836] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۲۱:۰۲:۵۳] [21:02:53.840] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۲۱:۰۲:۵۳] [21:02:53.844] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۲۱:۰۲:۵۳] [21:02:53.967] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.098] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.239] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.347] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23207!/ Service=ModLauncher Env=CLIENT \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.593] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.756] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.814] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping! \r",
+      "[۲۱:۰۲:۵۴] [21:02:54.816] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۲۱:۰۲:۵۴]      Mod List:",
+      "[۲۱:۰۲:۵۴] \t\tName Version (Mod Id)",
+      "[۲۱:۰۲:۵۴] \t\tMinecraft 1.21.1 (minecraft) \r",
+      "[۲۱:۰۲:۵۵] [21:02:55.006] [main/ERROR] [ModuleLayerHandler/]: Error while resolving modules. java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.world.level.block.entity.trialspawner, module neoforge exports package net.minecraft.world.level.block.entity.trialspawner to minecraft\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493) ~[?:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۱:۰۲:۵۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۱:۰۲:۵۵] \r",
+      "[۲۱:۰۲:۵۵] Exception in thread \"main\" java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.world.level.block.entity.trialspawner, module neoforge exports package net.minecraft.world.level.block.entity.trialspawner to minecraft\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900)\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806)\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735)\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380)\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139)\r",
+      "[۲۱:۰۲:۵۵] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)\r",
+      "[۲۱:۰۲:۵۵] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)\r",
+      "[۲۱:۰۲:۵۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210)\r",
+      "[۲۱:۰۲:۵۵] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69)\r",
+      "[۲۱:۰۲:۵۵] Game exited with code 1",
+      "[۲۲:۲۲:۳۱] Launch requested for F (1.21.1, NeoForge).",
+      "[۲۲:۲۲:۳۱] Resolving version 1.21.1…",
+      "[۲۲:۲۲:۳۱] Fetching NeoForge loader profile…",
+      "[۲۲:۲۲:۳۴] NeoForge loader installed: neoforge-21.1.236",
+      "[۲۲:۲۲:۳۵] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۲:۲۲:۳۵] Starting game process…",
+      "[۲۲:۲۲:۳۵] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۲:۲۲:۳۵] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۲۲:۲۲:۳۵] Game process started.",
+      "[۲۲:۲۲:۳۸] [22:22:38.490] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۲۲:۲۲:۳۸] [22:22:38.501] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۲۲:۲۲:۳۸] [22:22:38.507] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۲۲:۲۲:۳۸] [22:22:38.670] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۲۲:۲۲:۳۸] [22:22:38.819] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.072] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.212] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23207!/ Service=ModLauncher Env=CLIENT \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.463] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.664] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.736] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping! \r",
+      "[۲۲:۲۲:۳۹] [22:22:39.739] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۲۲:۲۲:۳۹]      Mod List:",
+      "[۲۲:۲۲:۳۹] \t\tName Version (Mod Id)",
+      "[۲۲:۲۲:۳۹] \t\tMinecraft 1.21.1 (minecraft) \r",
+      "[۲۲:۲۲:۴۰] [22:22:40.033] [main/ERROR] [ModuleLayerHandler/]: Error while resolving modules. java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.advancements.critereon, module neoforge exports package net.minecraft.advancements.critereon to minecraft\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493) ~[?:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23198!/:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۲:۲۲:۴۰] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۲۲:۲۲:۴۰] \r",
+      "[۲۲:۲۲:۴۰] Exception in thread \"main\" ",
+      "[۲۲:۲۲:۴۰] java.lang.module.ResolutionException: Module minecraft contains package net.minecraft.advancements.critereon, module neoforge exports package net.minecraft.advancements.critereon to minecraft\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.resolveFail(Resolver.java:900)\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.failTwoSuppliers(Resolver.java:806)\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.checkExportSuppliers(Resolver.java:735)\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Resolver.finish(Resolver.java:380)\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Configuration.<init>(Configuration.java:139)\r",
+      "[۲۲:۲۲:۴۰] \tat java.base/java.lang.module.Configuration.resolveAndBind(Configuration.java:493)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.ModuleLayerHandler.buildLayer(ModuleLayerHandler.java:81)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.TransformationServicesHandler.buildTransformingClassLoader(TransformationServicesHandler.java:54)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:101)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)\r",
+      "[۲۲:۲۲:۴۰] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)\r",
+      "[۲۲:۲۲:۴۰] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210)\r",
+      "[۲۲:۲۲:۴۰] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69)\r",
+      "[۲۲:۲۲:۴۰] Game exited with code 1",
+      "[۲۳:۰۶:۲۱] Launch requested for F (1.21.1, NeoForge).",
+      "[۲۳:۰۶:۲۱] Resolving version 1.21.1…",
+      "[۲۳:۰۶:۲۱] Fetching NeoForge loader profile…",
+      "[۲۳:۰۶:۲۸] Extracting binary patches from installer…",
+      "[۲۳:۰۶:۲۸] Downloading processor dependencies…",
+      "[۲۳:۰۶:۵۶] Mojmaps already present.",
+      "[۲۳:۰۶:۵۶] Running processor 3: MCP_DATA…",
+      "[۲۳:۰۶:۵۷] Running processor 4: DOWNLOAD_MOJMAPS…",
+      "[۲۳:۰۶:۵۷] Skipping DOWNLOAD_MOJMAPS — already fetched.",
+      "[۲۳:۰۶:۵۷] Running processor 5: MERGE_MAPPING…",
+      "[۲۳:۰۶:۵۹] Running processor 6: {MINECRAFT_JAR}…",
+      "[۲۳:۰۷:۰۵] Running processor 8: {MC_SLIM}…",
+      "[۲۳:۰۷:۱۴] Running processor 9: {MC_SRG}…",
+      "[۲۳:۰۷:۲۱] Injecting MANIFEST.MF into patched JAR…",
+      "[۲۳:۰۷:۲۲] MANIFEST.MF injected successfully.",
+      "[۲۳:۰۷:۲۲] All processors completed successfully.",
+      "[۲۳:۰۷:۲۲] NeoForge loader installed: neoforge-21.1.236",
+      "[۲۳:۰۷:۲۳] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۳:۰۷:۲۳] Starting game process…",
+      "[۲۳:۰۷:۲۳] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۳:۰۷:۲۳] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۲۳:۰۷:۲۳] Game process started.",
+      "[۲۳:۰۷:۲۵] [23:07:25.653] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۲۳:۰۷:۲۵] [23:07:25.659] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۲۳:۰۷:۲۵] [23:07:25.662] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۲۳:۰۷:۲۵] [23:07:25.815] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۲۳:۰۷:۲۵] [23:07:25.984] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.178] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.282] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23206!/ Service=ModLauncher Env=CLIENT \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.552] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.813] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.843] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"neoforge-21.1.236-universal.jar\" [locator: PathBasedLocator[name=neoforge, paths=[C:\\Users\\Amirsam\\vortex-launcher\\libraries\\net\\neoforged\\neoforge\\21.1.236\\neoforge-21.1.236-universal.jar]], reader: mod manifest] \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.981] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.981] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file \"mixinextras-neoforge-0.5.3.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.982] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found library file \"net.neoforged.neoforge-coremods-21.1.236.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۲۳:۰۷:۲۶] [23:07:26.983] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۲۳:۰۷:۲۶]      Mod List:",
+      "[۲۳:۰۷:۲۶] \t\tName Version (Mod Id)",
+      "[۲۳:۰۷:۲۶] \t\tMinecraft 1.21.1 (minecraft)",
+      "[۲۳:۰۷:۲۶] \t\tNeoForge 21.1.236 (neoforge) \r",
+      "[۲۳:۰۷:۲۷] [23:07:27.399] [main/INFO] [LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --uuid, 00000000-0000-0000-0000-000000000000, --username, F, --assetIndex, 17, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release] \r",
+      "[۲۳:۰۷:۲۷] WARN StatusConsoleListener Advanced terminal features are not available in this environment\r",
+      "[۲۳:۰۷:۳۰] [23:07:30] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 229 Datafixer optimizations took 366 milliseconds\r",
+      "[۲۳:۰۷:۳۰] [23:07:30] [pool-6-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23219!/assets/.mcassetsroot' uses unexpected schema\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23219!/data/.mcassetsroot' uses unexpected schema\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [Render thread/INFO] [minecraft/Minecraft]: Setting user: F\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5\r",
+      "[۲۳:۰۷:۳۴] [23:07:34] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.236, for MC 1.21.1\r",
+      "[۲۳:۰۷:۳۵] [23:07:35] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/neoforge\r",
+      "[۲۳:۰۷:۳۵] [23:07:35] [Worker-Main-4/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading\r",
+      "[۲۳:۰۷:۳۶] [23:07:36] [Worker-Main-6/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading\r",
+      "[۲۳:۰۷:۳۷] [23:07:37] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play\r",
+      "[۲۳:۰۷:۳۷] [23:07:37] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break\r",
+      "[۲۳:۰۷:۳۷] [23:07:37] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)\r",
+      "[۲۳:۰۷:۳۷] [23:07:37] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started\r",
+      "[۲۳:۰۷:۳۷] [23:07:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:37] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas\r",
+      "[۲۳:۰۷:۳۸] [23:07:38] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.\r",
+      "[۲۳:۰۷:۳۹] [23:07:39] [Render thread/INFO] [ne.ne.ne.cl.en.an.js.AnimationLoader/]: Loaded 0 entity animations\r",
+      "[۲۳:۰۷:۴۲] [23:07:42] [Render thread/INFO] [minecraft/Minecraft]: Stopping!\r",
+      "[۲۳:۰۷:۴۳] Game exited with code 0",
+      "[۲۳:۳۶:۰۱] Launch requested for F (1.21.1, NeoForge).",
+      "[۲۳:۳۶:۰۱] Resolving version 1.21.1…",
+      "[۲۳:۳۶:۰۱] Fetching NeoForge loader profile…",
+      "[۲۳:۳۶:۰۶] NeoForge loader installed: neoforge-21.1.236",
+      "[۲۳:۳۶:۰۸] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۳:۳۶:۰۸] Starting game process…",
+      "[۲۳:۳۶:۰۸] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۲۳:۳۶:۰۸] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۲۳:۳۶:۰۸] Game process started.",
+      "[۲۳:۳۶:۱۱] [23:36:11.107] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.115] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.118] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.363] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.572] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.800] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۲۳:۳۶:۱۱] [23:36:11.965] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23206!/ Service=ModLauncher Env=CLIENT \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.274] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.549] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.584] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"neoforge-21.1.236-universal.jar\" [locator: PathBasedLocator[name=neoforge, paths=[C:\\Users\\Amirsam\\vortex-launcher\\libraries\\net\\neoforged\\neoforge\\21.1.236\\neoforge-21.1.236-universal.jar]], reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.610] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"jei-1.21.1-neoforge-19.39.0.368.jar\" [locator: {mods folder locator at C:\\Users\\Amirsam\\vortex-launcher\\instances\\f\\mods}, reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.617] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"xaerominimap-neoforge-1.21.1-26.3.0.jar\" [locator: {mods folder locator at C:\\Users\\Amirsam\\vortex-launcher\\instances\\f\\mods}, reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.863] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.863] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file \"mixinextras-neoforge-0.5.3.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.864] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"xaerolib-neoforge-1.21.1-1.6.0.jar\" [parent: xaerominimap-neoforge-1.21.1-26.3.0.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.864] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found library file \"net.neoforged.neoforge-coremods-21.1.236.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۲۳:۳۶:۱۲] [23:36:12.866] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۲۳:۳۶:۱۲]      Mod List:",
+      "[۲۳:۳۶:۱۲] \t\tName Version (Mod Id)",
+      "[۲۳:۳۶:۱۲] \t\tJust Enough Items 19.39.0.368 (jei)",
+      "[۲۳:۳۶:۱۲] \t\tMinecraft 1.21.1 (minecraft)",
+      "[۲۳:۳۶:۱۲] \t\tNeoForge 21.1.236 (neoforge)",
+      "[۲۳:۳۶:۱۲] \t\tXaero's Minimap 26.3.0 (xaerominimap)",
+      "[۲۳:۳۶:۱۲] \t\tXaeroLib 1.6.0 (xaerolib) \r",
+      "[۲۳:۳۶:۱۳] [23:36:13.183] [main/INFO] [loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [xaerominimap] \r",
+      "[۲۳:۳۶:۱۴] [23:36:14.421] [main/INFO] [mixin/]: Compatibility level set to JAVA_17 \r",
+      "[۲۳:۳۶:۱۴] [23:36:14.447] [main/INFO] [LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --uuid, 00000000-0000-0000-0000-000000000000, --username, F, --assetIndex, 17, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release] \r",
+      "[۲۳:۳۶:۱۴] [23:36:14.532] [main/WARN] [mixin/]: Reference map 'xaerolib.refmap.json' for xaerolib.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۲۳:۳۶:۱۴] [23:36:14.534] [main/WARN] [mixin/]: Reference map 'xaerominimap.refmap.json' for xaerohud.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۲۳:۳۶:۱۴] [23:36:14.536] [main/WARN] [mixin/]: Reference map 'xaerominimap.refmap.json' for xaerominimap.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۲۳:۳۶:۱۵] [23:36:15.045] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3). \r",
+      "[۲۳:۳۶:۱۵] WARN StatusConsoleListener Advanced terminal features are not available in this environment\r",
+      "[۲۳:۳۶:۱۷] [23:36:17] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 229 Datafixer optimizations took 538 milliseconds\r",
+      "[۲۳:۳۶:۲۳] [23:36:23] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23221!/assets/.mcassetsroot' uses unexpected schema\r",
+      "[۲۳:۳۶:۲۳] [23:36:23] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23221!/data/.mcassetsroot' uses unexpected schema\r",
+      "[۲۳:۳۶:۲۳] [23:36:23] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]\r",
+      "[۲۳:۳۶:۲۳] [23:36:23] [Render thread/INFO] [minecraft/Minecraft]: Setting user: F\r",
+      "[۲۳:۳۶:۲۳] [23:36:23] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.236, for MC 1.21.1\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.hu.mi.MinimapLogs/]: No Optifine!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.hu.mi.MinimapLogs/]: Xaero's Minimap: No Vivecraft!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Registering common data for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Registering client data for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [me.je.li.lo.PluginCaller/]: Sending ConfigManager...\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [me.je.li.lo.PluginCaller/]: Sending ConfigManager took 2.545 milliseconds\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading primary common config for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading server config profiles for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading primary client config for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading client config profiles for channel xaerominimap:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Registering common data for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Registering client data for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading primary common config for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading server config profiles for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading primary client config for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۴] [23:36:24] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading client config profiles for channel xaerolib:main!\r",
+      "[۲۳:۳۶:۲۵] [23:36:25] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/xaerolib, mod/xaerominimap, mod/neoforge, mod/jei\r",
+      "[۲۳:۳۶:۲۵] [23:36:25] [Worker-Main-1/INFO] [xa.li.XaeroLib/]: Loading XaeroLib common 1/2!\r",
+      "[۲۳:۳۶:۲۶] [23:36:26] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading\r",
+      "[۲۳:۳۶:۲۶] [23:36:26] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading\r",
+      "[۲۳:۳۶:۲۶] [23:36:26] [Worker-Main-2/INFO] [xa.li.XaeroLib/]: Loading XaeroLib client 1/2!\r",
+      "[۲۳:۳۶:۲۶] [23:36:26] [Worker-Main-5/INFO] [xa.mi.XaeroMinimap/]: Loading Xaero's Minimap - Stage 1/2\r",
+      "[۲۳:۳۶:۲۸] [23:36:28] [Render thread/INFO] [xa.mi.XaeroMinimap/]: Loading Xaero's Minimap - Stage 2/2\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/INFO] [xa.hu.mi.MinimapLogs/]: Registered player tracker system: minimap_synced\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/WARN] [ne.ne.fm.DeferredWorkQueue/LOADING]: Mod 'xaerominimap' took 1.131 s to run a deferred task.\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/INFO] [xa.li.XaeroLib/]: Loading XaeroLib common 2/2!\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/INFO] [xa.li.XaeroLib/]: Loading XaeroLib client 2/2!\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play\r",
+      "[۲۳:۳۶:۲۹] [23:36:29] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas\r",
+      "[۲۳:۳۶:۳۰] [23:36:30] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [xa.li.XaeroLib/]: Successfully reloaded the XaeroLib shaders!\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [ne.ne.ne.cl.en.an.js.AnimationLoader/]: Loaded 0 entity animations\r",
+      "[۲۳:۳۶:۳۱] [23:36:31] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas\r",
+      "[۲۳:۳۶:۵۶] [23:36:56] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/xaerolib, mod/xaerominimap, mod/neoforge, mod/jei\r",
+      "[۲۳:۳۶:۵۶] [23:36:56] [Worker-Main-4/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading\r",
+      "[۲۳:۳۶:۵۶] [23:36:56] [Worker-Main-4/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading\r",
+      "[۲۳:۳۶:۵۷] [23:36:57] [Render thread/INFO] [minecraft/Minecraft]: Stopping!\r",
+      "[۲۳:۳۶:۵۸] Game exited with code 0",
+      "[۱۶:۲۷:۴۲] Launch requested for F (1.21.1, NeoForge).",
+      "[۱۶:۲۷:۴۲] Resolving version 1.21.1…",
+      "[۱۶:۲۷:۴۲] Fetching NeoForge loader profile…",
+      "[۱۶:۲۷:۴۳] NeoForge loader installed: neoforge-21.1.236",
+      "[۱۶:۲۷:۴۹] Using Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۱۶:۲۷:۴۹] Starting game process…",
+      "[۱۶:۲۷:۴۹] Java: C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.8.9-hotspot\\bin\\java.exe",
+      "[۱۶:۲۷:۴۹] Working directory: C:\\Users\\Amirsam\\vortex-launcher\\instances\\f",
+      "[۱۶:۲۷:۴۹] Game process started.",
+      "[۱۶:۲۷:۵۲] [16:27:52.565] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher running: args [--username, F, --version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --assetIndex, 17, --uuid, 00000000-0000-0000-0000-000000000000, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release, --fml.neoForgeVersion, 21.1.236, --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430, --launchTarget, forgeclient] \r",
+      "[۱۶:۲۷:۵۲] [16:27:52.584] [main/INFO] [Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.8+9-LTS \r",
+      "[۱۶:۲۷:۵۲] [16:27:52.590] [main/INFO] [Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0 \r",
+      "[۱۶:۲۷:۵۲] [16:27:52.785] [main/INFO] [loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow \r",
+      "[۱۶:۲۷:۵۲] [16:27:52.978] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6 \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.235] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6 \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.380] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Amirsam/vortex-launcher/libraries/net/fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/sponge-mixin-0.15.2+mixin.0.8.7.jar%23206!/ Service=ModLauncher Env=CLIENT \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.633] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) Iris(R) Xe Graphics GL version 4.6.0 - Build 31.0.101.4502, Intel \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.850] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"client-1.21.1-20240808.144430-srg.jar\" [locator: production client provider +net.neoforged:neoforge:21.1.236:client] \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.887] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"neoforge-21.1.236-universal.jar\" [locator: PathBasedLocator[name=neoforge, paths=[C:\\Users\\Amirsam\\vortex-launcher\\libraries\\net\\neoforged\\neoforge\\21.1.236\\neoforge-21.1.236-universal.jar]], reader: mod manifest] \r",
+      "[۱۶:۲۷:۵۳] [16:27:53.906] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"xaerominimap-neoforge-1.21.1-26.3.0.jar\" [locator: {mods folder locator at C:\\Users\\Amirsam\\vortex-launcher\\instances\\f\\mods}, reader: mod manifest] \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.122] [main/INFO] [loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.122] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file \"mixinextras-neoforge-0.5.3.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.123] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file \"xaerolib-neoforge-1.21.1-1.6.0.jar\" [parent: xaerominimap-neoforge-1.21.1-26.3.0.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.123] [main/INFO] [loading.moddiscovery.ModDiscoverer/SCAN]: Found library file \"net.neoforged.neoforge-coremods-21.1.236.jar\" [parent: neoforge-21.1.236-universal.jar, locator: jarinjar, reader: mod manifest] \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.124] [main/INFO] [loading.moddiscovery.ModDiscoverer/]: ",
+      "[۱۶:۲۷:۵۴]      Mod List:",
+      "[۱۶:۲۷:۵۴] \t\tName Version (Mod Id)",
+      "[۱۶:۲۷:۵۴] \t\tMinecraft 1.21.1 (minecraft)",
+      "[۱۶:۲۷:۵۴] \t\tNeoForge 21.1.236 (neoforge)",
+      "[۱۶:۲۷:۵۴] \t\tXaero's Minimap 26.3.0 (xaerominimap)",
+      "[۱۶:۲۷:۵۴] \t\tXaeroLib 1.6.0 (xaerolib) \r",
+      "[۱۶:۲۷:۵۴] [16:27:54.393] [main/INFO] [loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [xaerominimap] \r",
+      "[۱۶:۲۷:۵۵] [16:27:55.499] [main/INFO] [mixin/]: Compatibility level set to JAVA_17 \r",
+      "[۱۶:۲۷:۵۵] [16:27:55.522] [main/INFO] [LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, neoforge-21.1.236, --gameDir, C:\\Users\\Amirsam\\vortex-launcher\\instances\\f, --assetsDir, C:\\Users\\Amirsam\\vortex-launcher\\assets, --uuid, 00000000-0000-0000-0000-000000000000, --username, F, --assetIndex, 17, --accessToken, ❄❄❄❄❄❄❄❄, --clientId, , --xuid, , --userType, mojang, --versionType, release] \r",
+      "[۱۶:۲۷:۵۵] [16:27:55.587] [main/WARN] [mixin/]: Reference map 'xaerolib.refmap.json' for xaerolib.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۱۶:۲۷:۵۵] [16:27:55.588] [main/WARN] [mixin/]: Reference map 'xaerominimap.refmap.json' for xaerohud.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۱۶:۲۷:۵۵] [16:27:55.590] [main/WARN] [mixin/]: Reference map 'xaerominimap.refmap.json' for xaerominimap.mixins.json could not be read. If this is a development environment you can ignore this message \r",
+      "[۱۶:۲۷:۵۶] [16:27:56.071] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3). \r",
+      "[۱۶:۲۷:۵۶] WARN StatusConsoleListener Advanced terminal features are not available in this environment\r",
+      "[۱۶:۲۷:۵۸] [16:27:58] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 229 Datafixer optimizations took 695 milliseconds\r",
+      "[۱۶:۲۸:۰۵] [16:28:05] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23220!/assets/.mcassetsroot' uses unexpected schema\r",
+      "[۱۶:۲۸:۰۵] [16:28:05] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Amirsam/vortex-launcher/libraries/net/minecraft/client/1.21.1-20240808.144430/client-1.21.1-20240808.144430-srg.jar%23220!/data/.mcassetsroot' uses unexpected schema\r",
+      "[۱۶:۲۸:۰۵] [16:28:05] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]\r",
+      "[۱۶:۲۸:۰۵] [16:28:05] [Render thread/INFO] [minecraft/Minecraft]: Setting user: F\r",
+      "[۱۶:۲۸:۰۵] [16:28:05] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.236, for MC 1.21.1\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.hu.mi.MinimapLogs/]: No Optifine!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.hu.mi.MinimapLogs/]: Xaero's Minimap: No Vivecraft!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Registering common data for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Registering client data for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading primary common config for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading server config profiles for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading primary client config for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.co.HudMod/]: Loading client config profiles for channel xaerominimap:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Registering common data for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Registering client data for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading primary common config for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading server config profiles for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading primary client config for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۶] [16:28:06] [modloading-worker-0/INFO] [xa.li.XaeroLib/]: Loading client config profiles for channel xaerolib:main!\r",
+      "[۱۶:۲۸:۰۷] [16:28:07] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/xaerolib, mod/xaerominimap, mod/neoforge\r",
+      "[۱۶:۲۸:۰۷] [16:28:07] [Worker-Main-1/INFO] [xa.li.XaeroLib/]: Loading XaeroLib common 1/2!\r",
+      "[۱۶:۲۸:۰۸] [16:28:08] [Render thread/INFO] [minecraft/Minecraft]: Stopping!\r",
+      "[۱۶:۲۸:۰۸] [16:28:08] [Render thread/ERROR] [minecraft/Minecraft]: Shutdown failure!\r",
+      "[۱۶:۲۸:۰۸] java.util.ConcurrentModificationException: null\r",
+      "[۱۶:۲۸:۰۸] \tat java.base/java.util.HashMap.forEach(HashMap.java:1432) ~[?:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat TRANSFORMER/minecraft@1.21.1/net.minecraft.client.renderer.texture.TextureManager.close(TextureManager.java:173) ~[client-1.21.1-20240808.144430-srg.jar%23220!/:?] {re:classloading}\r",
+      "[۱۶:۲۸:۰۸] \tat TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.close(Minecraft.java:1122) ~[client-1.21.1-20240808.144430-srg.jar%23220!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}\r",
+      "[۱۶:۲۸:۰۸] \tat TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.destroy(Minecraft.java:1094) ~[client-1.21.1-20240808.144430-srg.jar%23220!/:?] {re:mixin,pl:runtimedistcleaner:A,re:classloading,pl:mixin:A,pl:runtimedistcleaner:A}\r",
+      "[۱۶:۲۸:۰۸] \tat TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:236) ~[client-1.21.1-20240808.144430-srg.jar%23220!/:?] {re:classloading,pl:runtimedistcleaner:A}\r",
+      "[۱۶:۲۸:۰۸] \tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.43.jar%23192!/:4.0] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.43.jar%23192!/:4.0] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonClientLaunchHandler.runService(CommonClientLaunchHandler.java:32) ~[loader-4.0.43.jar%23192!/:4.0] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.43.jar%23192!/:4.0] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23197!/:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۱۶:۲۸:۰۸] \tat cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}\r",
+      "[۱۶:۲۸:۰۸] [16:28:08] [Worker-Main-6/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading\r",
+      "[۱۶:۲۸:۰۸] Game exited with code 0"
+    ],
+    "settings": {
+      "ram": 4,
+      "resolution": "1920 x 1080"
+    }
+  },
+  {
+    "id": "inst_1784209528378_8196",
+    "name": "From the Fog+",
+    "version": "1.20.1",
+    "loader": "Forge",
+    "iconColor": "#4fd889",
+    "iconImage": "https://cdn.modrinth.com/data/cCx9bgOd/d16f28fcc46f3e565fe70d6637374e688463ed72_96.webp",
+    "lastPlayed": null,
+    "mods": [
+      {
+        "projectId": "cCx9bgOd",
+        "title": "From the Fog+",
+        "icon": "https://cdn.modrinth.com/data/cCx9bgOd/d16f28fcc46f3e565fe70d6637374e688463ed72_96.webp",
+        "version": "latest",
+        "kind": "modpack"
+      },
+      {
+        "title": "ImmediatelyFast-Forge-1.2.11+1.20.4.jar",
+        "fileName": "ImmediatelyFast-Forge-1.2.11+1.20.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "BOH_0.0.5.jar",
+        "fileName": "BOH_0.0.5.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+        "fileName": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
+        "version": "latest"
+      },
+      {
+        "title": "simplyswords-forge-1.55.0-1.20.1.jar",
+        "fileName": "simplyswords-forge-1.55.0-1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "supermartijn642corelib-1.1.17-forge-mc1.20.1.jar",
+        "fileName": "supermartijn642corelib-1.1.17-forge-mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "balm-forge-1.20.1-7.2.2.jar",
+        "fileName": "balm-forge-1.20.1-7.2.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsBridges-1.20-Forge-4.0.3.jar",
+        "fileName": "YungsBridges-1.20-Forge-4.0.3.jar",
+        "version": "latest"
+      },
+      {
+        "title": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+        "fileName": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "fancymenu_forge_3.1.5_MC_1.20.1.jar",
+        "fileName": "fancymenu_forge_3.1.5_MC_1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+        "fileName": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "larger-ore-veins-deluxe-v0.2.1.jar",
+        "fileName": "larger-ore-veins-deluxe-v0.2.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cave_dweller-1.20.1-1.7.0.jar",
+        "fileName": "cave_dweller-1.20.1-1.7.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "travelersbackpack-forge-1.20.1-9.1.13.jar",
+        "fileName": "travelersbackpack-forge-1.20.1-9.1.13.jar",
+        "version": "latest"
+      },
+      {
+        "title": "wthit-forge-8.9.0.jar",
+        "fileName": "wthit-forge-8.9.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "starlight-1.1.2+forge.1cda73c.jar",
+        "fileName": "starlight-1.1.2+forge.1cda73c.jar",
+        "version": "latest"
+      },
+      {
+        "title": "ferritecore-6.0.1-forge.jar",
+        "fileName": "ferritecore-6.0.1-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "textrues_embeddium_options-0.1.5+mc1.20.1.jar",
+        "fileName": "textrues_embeddium_options-0.1.5+mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+        "fileName": "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "letmedespawn-forge-1.20.x-1.2.0.jar",
+        "fileName": "letmedespawn-forge-1.20.x-1.2.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "BiomesOPlenty-1.20.1-18.0.0.598.jar",
+        "fileName": "BiomesOPlenty-1.20.1-18.0.0.598.jar",
+        "version": "latest"
+      },
+      {
+        "title": "FarmersDelight-1.20.1-1.2.4.jar",
+        "fileName": "FarmersDelight-1.20.1-1.2.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cloth-config-11.1.118-forge.jar",
+        "fileName": "cloth-config-11.1.118-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cullleaves-forge-3.2.0.jar",
+        "fileName": "cullleaves-forge-3.2.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "e4mc-4.0.1+1.19.4-forge.jar",
+        "fileName": "e4mc-4.0.1+1.19.4-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "modernfix-forge-5.16.1+mc1.20.1.jar",
+        "fileName": "modernfix-forge-5.16.1+mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "supplementaries-1.20-2.8.10.jar",
+        "fileName": "supplementaries-1.20-2.8.10.jar",
+        "version": "latest"
+      },
+      {
+        "title": "Iceberg-1.20.1-forge-1.1.21.jar",
+        "fileName": "Iceberg-1.20.1-forge-1.1.21.jar",
+        "version": "latest"
+      },
+      {
+        "title": "notenoughcrashes-4.4.7+1.20.1-forge.jar",
+        "fileName": "notenoughcrashes-4.4.7+1.20.1-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "geckolib-forge-1.20.1-4.4.4.jar",
+        "fileName": "geckolib-forge-1.20.1-4.4.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "Nyctophobia_1.6_(FORGE)_for_1.20+.jar",
+        "fileName": "Nyctophobia_1.6_(FORGE)_for_1.20+.jar",
+        "version": "latest"
+      },
+      {
+        "title": "embeddium-0.3.14+mc1.20.1.jar",
+        "fileName": "embeddium-0.3.14+mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "alexscaves-1.1.4.jar",
+        "fileName": "alexscaves-1.1.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "[1.20.1] SecurityCraft v1.9.9.jar",
+        "fileName": "[1.20.1] SecurityCraft v1.9.9.jar",
+        "version": "latest"
+      },
+      {
+        "title": "nyfsspiders-forge-1.20.1-2.1.1.jar",
+        "fileName": "nyfsspiders-forge-1.20.1-2.1.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "Xaeros_Minimap_24.1.1_Forge_1.20.jar",
+        "fileName": "Xaeros_Minimap_24.1.1_Forge_1.20.jar",
+        "version": "latest"
+      },
+      {
+        "title": "architectury-9.2.14-forge.jar",
+        "fileName": "architectury-9.2.14-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "WhisperingSpirits-forge-1.20.1-v1.2.0.jar",
+        "fileName": "WhisperingSpirits-forge-1.20.1-v1.2.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "appleskin-forge-mc1.20.1-2.5.1.jar",
+        "fileName": "appleskin-forge-mc1.20.1-2.5.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "The_Graveyard_3.1_(FORGE)_for_1.20.1.jar",
+        "fileName": "The_Graveyard_3.1_(FORGE)_for_1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "radium-mc1.20.1-0.12.3+git.50c5c33.jar",
+        "fileName": "radium-mc1.20.1-0.12.3+git.50c5c33.jar",
+        "version": "latest"
+      },
+      {
+        "title": "entity_texture_features_forge_1.20.1-6.0.jar",
+        "fileName": "entity_texture_features_forge_1.20.1-6.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
+        "fileName": "YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsApi-1.20-Forge-4.0.4.jar",
+        "fileName": "YungsApi-1.20-Forge-4.0.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "YungsBetterJungleTemples-1.20-Forge-2.0.4.jar",
+        "fileName": "YungsBetterJungleTemples-1.20-Forge-2.0.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "veinminer-1.1.0.jar",
+        "fileName": "veinminer-1.1.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "voicechat-forge-1.20.1-2.5.12.jar",
+        "fileName": "voicechat-forge-1.20.1-2.5.12.jar",
+        "version": "latest"
+      },
+      {
+        "title": "dynamiclights-v1.7.1-mc1.17x-1.20x-mod.jar",
+        "fileName": "dynamiclights-v1.7.1-mc1.17x-1.20x-mod.jar",
+        "version": "latest"
+      },
+      {
+        "title": "FallingTree-1.20.1-4.3.4.jar",
+        "fileName": "FallingTree-1.20.1-4.3.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "kotlinforforge-4.10.0-all.jar",
+        "fileName": "kotlinforforge-4.10.0-all.jar",
+        "version": "latest"
+      },
+      {
+        "title": "resourcefullib-forge-1.20.1-2.1.24.jar",
+        "fileName": "resourcefullib-forge-1.20.1-2.1.24.jar",
+        "version": "latest"
+      },
+      {
+        "title": "moremobvariants-forge+1.20.1-1.3.0.jar",
+        "fileName": "moremobvariants-forge+1.20.1-1.3.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "endofherobrine-1.20.1-1.0.8.2.jar",
+        "fileName": "endofherobrine-1.20.1-1.0.8.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "Rex's-AdditionalStructures-1.20.x-(v.4.2.1).jar",
+        "fileName": "Rex's-AdditionalStructures-1.20.x-(v.4.2.1).jar",
+        "version": "latest"
+      },
+      {
+        "title": "moonlight-1.20-2.11.12-forge.jar",
+        "fileName": "moonlight-1.20-2.11.12-forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+        "fileName": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
+        "version": "latest"
+      },
+      {
+        "title": "badpackets-forge-0.4.3.jar",
+        "fileName": "badpackets-forge-0.4.3.jar",
+        "version": "latest"
+      },
+      {
+        "title": "XaerosWorldMap_1.38.4_Forge_1.20.jar",
+        "fileName": "XaerosWorldMap_1.38.4_Forge_1.20.jar",
+        "version": "latest"
+      },
+      {
+        "title": "doubledoors-1.20.1-5.4.jar",
+        "fileName": "doubledoors-1.20.1-5.4.jar",
+        "version": "latest"
+      },
+      {
+        "title": "AdvancementPlaques-1.20.1-forge-1.4.10.jar",
+        "fileName": "AdvancementPlaques-1.20.1-forge-1.4.10.jar",
+        "version": "latest"
+      },
+      {
+        "title": "entity_model_features_forge_1.20.1-2.0.jar",
+        "fileName": "entity_model_features_forge_1.20.1-2.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "From-The-Fog-1.20-v1.9.2-Forge-Fabric.jar",
+        "fileName": "From-The-Fog-1.20-v1.9.2-Forge-Fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "WI-Zoom-1.5-MC1.20.1-Forge.jar",
+        "fileName": "WI-Zoom-1.5-MC1.20.1-Forge.jar",
+        "version": "latest"
+      },
+      {
+        "title": "citadel-2.5.4-1.20.1.jar",
+        "fileName": "citadel-2.5.4-1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "chat_heads-0.10.32-forge-1.20.jar",
+        "fileName": "chat_heads-0.10.32-forge-1.20.jar",
+        "version": "latest"
+      },
+      {
+        "title": "CreativeCore_FORGE_v2.11.26_mc1.20.1.jar",
+        "fileName": "CreativeCore_FORGE_v2.11.26_mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "movingelevators-1.4.6-forge-mc1.20.1.jar",
+        "fileName": "movingelevators-1.4.6-forge-mc1.20.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "midnightlib-forge-1.4.2.jar",
+        "fileName": "midnightlib-forge-1.4.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "oculus-mc1.20.1-1.6.15a.jar",
+        "fileName": "oculus-mc1.20.1-1.6.15a.jar",
+        "version": "latest"
+      },
+      {
+        "title": "jei-1.20.1-forge-15.3.0.4.jar",
+        "fileName": "jei-1.20.1-forge-15.3.0.4.jar",
+        "version": "latest"
+      }
+    ],
+    "resourcepacks": [
+      {
+        "title": "FreshAnimations_v1.9.zip",
+        "fileName": "FreshAnimations_v1.9.zip",
+        "version": "latest"
+      }
+    ],
+    "shaderpacks": [
+      {
+        "title": "BSL_v8.2.09p1.zip",
+        "fileName": "BSL_v8.2.09p1.zip",
+        "version": "latest"
+      },
+      {
+        "title": "ComplementaryUnbound_r5.1.1.zip",
+        "fileName": "ComplementaryUnbound_r5.1.1.zip",
+        "version": "latest"
+      }
+    ],
+    "datapacks": [],
+    "saves": [],
+    "logs": [
+      "[۱۸:۰۲:۱۱] Launch requested for From the Fog+ (1.20.1, Forge).",
+      "[۱۸:۰۲:۱۱] Resolving version 1.20.1…",
+      "[۱۸:۰۲:۱۱] Fetching Forge loader profile…",
+      "[۱۸:۰۵:۳۱] Launch requested for From the Fog+ (1.20.1, Forge).",
+      "[۱۸:۰۵:۳۱] Resolving version 1.20.1…",
+      "[۱۸:۰۵:۳۱] Fetching Forge loader profile…",
+      "[۱۸:۰۷:۱۰] Extracting binary patches from installer…",
+      "[۱۸:۰۷:۱۰] Downloading processor dependencies…",
+      "[۱۸:۰۷:۳۱] Pre-downloading mojmaps via Node.js…",
+      "[۱۸:۰۸:۱۰] Mojmaps downloaded (7814 KB).",
+      "[۱۸:۰۸:۱۰] Running processor 3: MCP_DATA…",
+      "[۱۸:۰۸:۱۱] Running processor 4: DOWNLOAD_MOJMAPS…",
+      "[۱۸:۰۸:۱۱] Skipping DOWNLOAD_MOJMAPS — already fetched.",
+      "[۱۸:۰۸:۱۱] Running processor 5: MERGE_MAPPING…",
+      "[۱۸:۰۸:۱۳] Running processor 6: {MINECRAFT_JAR}…",
+      "[۱۸:۰۸:۲۰] Running processor 8: {MC_SLIM}…",
+      "[۱۸:۰۸:۲۷] Running processor 9: {MC_SRG}…",
+      "[۱۸:۰۸:۳۳] Injecting MANIFEST.MF into patched JAR…",
+      "[۱۸:۰۸:۳۴] Warning: could not inject manifest via jar command: Command failed: jar uf C:\\Users\\Amirsam\\vortex-launcher\\libraries\\net\\neoforged\\neoforge\\1.20.1-47.4.5\\neoforge-1.20.1-47.4.5-client.jar -C C:\\Users\\Amirsam\\vortex-launcher\\versions\\neoforge-1.20.1-47.4.5\\processors\\_manifest_inject META-INF/MANIFEST.MF\njava.io.IOException: The system cannot find the path specified\r\n\tat java.base/java.io.WinNTFileSystem.createFileExclusively0(Native Method)\r\n\tat java.base/java.io.WinNTFileSystem.createFileExclusively(WinNTFileSystem.java:536)\r\n\tat java.base/java.io.File.createTempFile(File.java:2184)\r\n\tat jdk.jartool/sun.tools.jar.Main.createTempFileInSameDirectoryAs(Main.java:246)\r\n\tat jdk.jartool/sun.tools.jar.Main.run(Main.java:339)\r\n\tat jdk.jartool/sun.tools.jar.Main.main(Main.java:1700)\r\n",
+      "[۱۸:۰۸:۳۴] All processors completed successfully.",
+      "[۱۸:۰۸:۳۴] Forge loader installed: 1.20.1-forge-47.4.5",
+      "[۱۸:۱۳:۰۷] Launch failed: Client network socket disconnected before secure TLS connection was established",
+      "[۱۸:۱۳:۰۷] Launch failed: Client network socket disconnected before secure TLS connection was established",
+      "[۱۸:۲۲:۱۲] Launch requested for From the Fog+ (1.20.1, Forge).",
+      "[۱۸:۲۲:۱۲] Resolving version 1.20.1…",
+      "[۱۸:۲۲:۱۲] Fetching Forge loader profile…",
+      "[۱۸:۲۲:۲۷] Launch failed: Client network socket disconnected before secure TLS connection was established",
+      "[۱۸:۲۲:۲۷] Launch failed: Client network socket disconnected before secure TLS connection was established"
+    ],
+    "settings": {
+      "ram": 4,
+      "resolution": "1920 × 1080"
+    }
+  },
+  {
+    "id": "inst_1784297947380_3877",
+    "name": "545",
+    "version": "26.2",
+    "loader": "Fabric",
+    "iconColor": "#a05ad1",
+    "iconImage": null,
+    "lastPlayed": null,
+    "mods": [],
+    "resourcepacks": [],
+    "shaderpacks": [],
+    "datapacks": [],
+    "saves": [],
+    "logs": [],
+    "settings": {
+      "ram": 4,
+      "resolution": "1920 x 1080"
+    }
+  },
+  {
+    "id": "inst_1784297951390_835",
+    "name": "Fabulously Optimized",
+    "version": "1.21.1",
+    "loader": "Fabric",
+    "iconColor": "#4fd889",
+    "iconImage": "https://cdn.modrinth.com/data/1KVo5zza/d8152911f8fd5d7e9a8c499fe89045af81fe816e_96.webp",
+    "lastPlayed": null,
+    "mods": [
+      {
+        "projectId": "1KVo5zza",
+        "title": "Fabulously Optimized",
+        "icon": "https://cdn.modrinth.com/data/1KVo5zza/d8152911f8fd5d7e9a8c499fe89045af81fe816e_96.webp",
+        "version": "latest",
+        "kind": "modpack"
+      },
+      {
+        "title": "BetterGrassify-1.8.7+fabric.26.2.jar",
+        "fileName": "BetterGrassify-1.8.7+fabric.26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "ConfigManager-fabric-26.1_26.2-1.1.3.jar",
+        "fileName": "ConfigManager-fabric-26.1_26.2-1.1.3.jar",
+        "version": "latest"
+      },
+      {
+        "title": "CrashAssistant-fabric-26.2-1.11.10.jar",
+        "fileName": "CrashAssistant-fabric-26.2-1.11.10.jar",
+        "version": "latest"
+      },
+      {
+        "title": "ForgeConfigAPIPort-v26.2.1-mc26.2.x-Fabric.jar",
+        "fileName": "ForgeConfigAPIPort-v26.2.1-mc26.2.x-Fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "ImmediatelyFast-Fabric-1.16.1+26.2.jar",
+        "fileName": "ImmediatelyFast-Fabric-1.16.1+26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "Ixeris-4.5.1+26.2-fabric.jar",
+        "fileName": "Ixeris-4.5.1+26.2-fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "NoChatReports-FABRIC-26.2-v2.20.0.jar",
+        "fileName": "NoChatReports-FABRIC-26.2-v2.20.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "animatica-0.6.2+26.2.jar",
+        "fileName": "animatica-0.6.2+26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "bbe-fabric-1.3.6+mc26.2.jar",
+        "fileName": "bbe-fabric-1.3.6+mc26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "bettermounthud-1.3.1.jar",
+        "fileName": "bettermounthud-1.3.1.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cape-provider-5.5.0.jar",
+        "fileName": "cape-provider-5.5.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cloth-config-26.2.155.jar",
+        "fileName": "cloth-config-26.2.155.jar",
+        "version": "latest"
+      },
+      {
+        "title": "continuity-3.0.1+26.2.jar",
+        "fileName": "continuity-3.0.1+26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "controlify-3.0.2+26.2-fabric.jar",
+        "fileName": "controlify-3.0.2+26.2-fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "cwb-4.1.0+26.2.jar",
+        "fileName": "cwb-4.1.0+26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "debugify-26.2.0.0.jar",
+        "fileName": "debugify-26.2.0.0.jar",
+        "version": "latest"
+      },
+      {
+        "title": "dynamic-fps-3.11.9+minecraft-26.2.0-fabric.jar",
+        "fileName": "dynamic-fps-3.11.9+minecraft-26.2.0-fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "e4mc-fabric-6.2.0-modern.jar",
+        "fileName": "e4mc-fabric-6.2.0-modern.jar",
+        "version": "latest"
+      },
+      {
+        "title": "entity_model_features-3.2.6-26.2-fabric.jar",
+        "fileName": "entity_model_features-3.2.6-26.2-fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "entity_texture_features-7.1.1-26.2-fabric.jar",
+        "fileName": "entity_texture_features-7.1.1-26.2-fabric.jar",
+        "version": "latest"
+      },
+      {
+        "title": "entityculling-fabric-1.10.5-mc26.2.jar",
+        "fileName": "entityculling-fabric-1.10.5-mc26.2.jar",
+        "version": "latest"
+      },
+      {
+        "title": "fabric-api-0.153.0+26.2.jar",
+        "fileName": "fabric-api-0.153.0+26.2.jar",
+        "version": "latest"
+      }
+    ],
+    "resourcepacks": [],
+    "shaderpacks": [],
+    "datapacks": [],
+    "saves": [],
+    "logs": [],
+    "settings": {
+      "ram": 4,
+      "resolution": "1920 × 1080"
+    }
+  }
+]

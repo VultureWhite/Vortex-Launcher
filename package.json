@@ -1,6 +1,6 @@
 {
   "name": "vortex-launcher",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha",
   "description": "Vortex Launcher — Unofficial Minecraft Launcher",
   "main": "src/main.js",
   "scripts": {
@@ -68,6 +68,10 @@
   },
   "author": "Vulture",
   "license": "MIT",
+  "dependencies": {
+    "yauzl": "^3.2.0",
+    "unzipper": "^0.12.3"
+  },
   "devDependencies": {
     "electron": "^35.0.0",
     "electron-builder": "^26.15.3"

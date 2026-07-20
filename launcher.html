@@ -186,7 +186,8 @@
     position: relative;
     flex: 1;
     min-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     display:flex; flex-direction:column;
   }
   .hero-sky{
@@ -287,6 +288,82 @@
   }
   .news-title{ font-size: 13px; font-weight:600; margin-bottom:6px; }
   .news-body{ font-size: 12px; color: var(--text-dim); line-height:1.45; }
+
+  /* ---------- home sections ---------- */
+  .home-section{ position:relative; padding: 20px 44px 24px; }
+  .home-section-title{ font-family:'Silkscreen', monospace; font-size:10px; letter-spacing:2px; color: rgba(255,255,255,.7); margin-bottom:12px; }
+  .home-recents{ display:flex; gap:12px; overflow-x:auto; padding-bottom:4px; }
+  .home-recent-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    min-width: 220px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .home-recent-card:hover{ border-color: var(--emerald); box-shadow: 0 0 0 1px var(--emerald); }
+  .home-recent-top{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .home-recent-icon{ width:32px; height:32px; border-radius:6px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:14px; color:#1b140a; }
+  .home-recent-name{ font-size:13.5px; font-weight:700; }
+  .home-recent-meta{ display:flex; gap:5px; margin-bottom:8px; }
+  .home-recent-badge{ font-family:'JetBrains Mono', monospace; font-size:10px; background:rgba(255,255,255,.08); padding:2px 6px; border-radius:4px; }
+  .home-recent-play{
+    width:100%;
+    padding:7px 0;
+    border-radius:6px;
+    border:1px solid var(--emerald);
+    background: transparent;
+    color: var(--emerald);
+    font-weight:600;
+    font-size:12px;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .home-recent-play:hover{ background: var(--emerald); color:#fff; }
+  .home-recent-empty{
+    background: var(--panel);
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display:flex; align-items:center; gap:14px;
+    width: 100%;
+  }
+  .home-recent-empty-icon{ font-size:22px; opacity:.4; }
+  .home-recent-empty-text{ font-size:13px; color: var(--text-dim); }
+  .home-recent-empty-text strong{ color: var(--text); }
+  .home-stats{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap; }
+  .home-stat{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 20px;
+    flex: 1 1 0;
+    min-width: 100px;
+    text-align:center;
+  }
+  .home-stat-num{ font-family:'Space Grotesk', sans-serif; font-size:22px; font-weight:700; color: var(--diamond); }
+  .home-stat-label{ font-size:11px; color: var(--text-dim); margin-top:2px; }
+  .home-stat-sub{ font-size:10px; color: var(--text-faint); margin-top:1px; }
+  .home-actions{ display:flex; gap:10px; margin-top:16px; }
+  .home-action{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 18px;
+    flex: 1 1 0;
+    min-width: 140px;
+    cursor:pointer;
+    transition: border-color .15s;
+    text-align:center;
+    color: var(--text);
+    font-size:13px;
+    font-weight:600;
+  }
+  .home-action:hover{ border-color: var(--emerald); }
+  .home-action-icon{ font-size:20px; margin-bottom:4px; }
+  .home-action-hint{ font-size:11px; color: var(--text-dim); font-weight:400; margin-top:3px; }
 
   /* ---------- launch bar ---------- */
   .launch-bar{
@@ -455,11 +532,12 @@
     border-radius: var(--radius); padding: 12px 14px;
   }
   .acc-row .avatar{ width:34px; height:34px; font-size:12px; }
+  .acc-actions{ display:flex; gap:8px; margin-left:auto; align-items:center; }
   .acc-remove{
-    margin-left:auto; background:none; border:none; color: var(--text-faint);
-    cursor:pointer; font-size: 12px;
+    background:none; border:none; color: var(--text-faint);
+    cursor:pointer; font-size: 14px; padding: 4px 8px; border-radius: 4px;
   }
-  .acc-remove:hover{ color: var(--danger); }
+  .acc-remove:hover{ color: var(--danger); background: rgba(229,89,93,.12); }
   .add-account{
     display:flex; gap:10px; margin-top: 14px;
   }
@@ -840,6 +918,11 @@
     .hero-content{ padding: 26px 20px 0; }
     .hero-title{ font-size: 24px; }
     .news-strip{ padding: 16px 20px 0; }
+    .home-section{ padding: 16px 20px 0; }
+    .home-stats{ flex-wrap:wrap; }
+    .home-stat{ min-width: 100px; }
+    .home-actions{ flex-wrap:wrap; }
+    .home-action{ min-width: 120px; }
     .launch-bar{ flex-wrap:wrap; padding: 14px 20px; gap:12px; }
     .status-ticker{ order:3; width:100%; }
     .panel-view{ padding: 22px 20px; }
@@ -864,6 +947,11 @@
   body.force-mobile .hero-content{ padding: 26px 20px 0; }
   body.force-mobile .hero-title{ font-size: 24px; }
   body.force-mobile .news-strip{ padding: 16px 20px 0; }
+  body.force-mobile .home-section{ padding: 16px 20px 0; }
+  body.force-mobile .home-stats{ flex-wrap:wrap; }
+  body.force-mobile .home-stat{ min-width: 100px; }
+  body.force-mobile .home-actions{ flex-wrap:wrap; }
+  body.force-mobile .home-action{ min-width: 120px; }
   body.force-mobile .launch-bar{ flex-wrap:wrap; padding: 14px 20px; gap:12px; }
   body.force-mobile .status-ticker{ order:3; width:100%; }
   body.force-mobile .panel-view{ padding: 22px 20px; }
@@ -906,7 +994,7 @@
       </div>
       <div>
         <div class="brand-name">Vortex Launcher</div>
-        <div class="brand-sub">UNOFFICIAL FAN BUILD</div>
+        <div class="brand-sub">Fan-made Minecraft Launcher</div>
       </div>
     </div>
 
@@ -950,7 +1038,7 @@
       </button>
     </nav>
 
-    <div class="sidebar-foot">build 2.3.0 · not affiliated with Mojang</div>
+    <div class="sidebar-foot" id="sidebarVersion">v0.1.0-alpha · not affiliated with Mojang</div>
   </aside>
 
   <!-- MAIN -->
@@ -973,19 +1061,47 @@
 
         <div class="news-strip">
           <div class="news-card">
-            <div class="news-tag">◆ PATCH NOTES</div>
-            <div class="news-title">Fresh Drop — 1.21.4</div>
-            <div class="news-body">Pathfinding fixes for villagers and a handful of world-gen tweaks.</div>
+            <div class="news-tag">◆ RELEASE</div>
+            <div class="news-title">Vortex Launcher v0.1.0-alpha</div>
+            <div class="news-body">First alpha release — instances, modpacks, skins, and multi-loader support.</div>
           </div>
           <div class="news-card">
-            <div class="news-tag">◆ COMMUNITY</div>
-            <div class="news-title">Build contest voting is open</div>
-            <div class="news-body">Cast your vote for this season's redstone showcase entries.</div>
+            <div class="news-tag">◆ SUPPORTED LOADERS</div>
+            <div class="news-title">Fabric, Forge, NeoForge, Quilt</div>
+            <div class="news-body">Create instances with any major mod loader or play vanilla.</div>
           </div>
           <div class="news-card">
-            <div class="news-tag">◆ SNAPSHOT</div>
-            <div class="news-title">New biome experiment</div>
-            <div class="news-body">Try the sandbox snapshot from the Versions tab — feedback welcome.</div>
+            <div class="news-tag">◆ MODPACKS</div>
+            <div class="news-title">Install modpacks from Modrinth</div>
+            <div class="news-body">Download a modpack and a ready-to-play instance is created automatically.</div>
+          </div>
+        </div>
+
+        <div class="home-section" id="homeRecentsSection">
+          <div class="home-section-title">◆ RECENT</div>
+          <div class="home-recents" id="homeRecents"></div>
+          <div class="home-stats" id="homeStats"></div>
+          <div class="home-actions" id="homeActions">
+            <div class="home-action" data-nav="instances">
+              <div class="home-action-icon">+</div>
+              <div>Create Instance</div>
+              <div class="home-action-hint">Set up a new Minecraft profile</div>
+            </div>
+            <div class="home-action" data-nav="modpacks">
+              <div class="home-action-icon">&#x2B07;</div>
+              <div>Browse Modpacks</div>
+              <div class="home-action-hint">Download from Modrinth</div>
+            </div>
+            <div class="home-action" data-nav="skins">
+              <div class="home-action-icon">&#x25A0;</div>
+              <div>Change Skin</div>
+              <div class="home-action-hint">Pick a preset or upload</div>
+            </div>
+            <div class="home-action" data-nav="settings">
+              <div class="home-action-icon">&#x2699;</div>
+              <div>Settings</div>
+              <div class="home-action-hint">Java, memory, resolution</div>
+            </div>
           </div>
         </div>
       </div>
@@ -995,11 +1111,7 @@
     <section class="panel-view" id="view-modpacks">
       <div class="panel-head"><div class="panel-title">Modpacks</div></div>
       <div class="panel-sub">Download a modpack and a fully configured instance is created for you automatically.</div>
-      <div class="source-tag"><span class="live-dot"></span>Live data from api.modrinth.com — beta build, files aren't saved to your device</div>
-      <div id="modpackFileWarning" class="error-hint" style="display:none; margin-bottom:14px;">
-        This page is open as a local file (file://). Some browsers block live API requests from local files.
-        Serve it from a local server (e.g. <code>python3 -m http.server</code>) or host it online to fix this.
-      </div>
+      <div class="source-tag"><span class="live-dot"></span>Live data from api.modrinth.com</div>
 
       <div class="mod-toolbar">
         <input type="text" class="mod-search-input" id="modpackSearchInput" placeholder="Search Modrinth modpacks…">
@@ -1077,11 +1189,7 @@
         <div id="detailLogsList"></div>
       </div>
       <div class="detail-tab-panel" id="detailTab-downloads">
-        <div class="source-tag"><span class="live-dot"></span>Live data from api.modrinth.com — installs go only into this instance, beta build (nothing saved to your device)</div>
-        <div id="instDlFileWarning" class="error-hint" style="display:none; margin-bottom:14px;">
-          This page is open as a local file (file://). Some browsers block live API requests from local files.
-          Serve it from a local server (e.g. <code>python3 -m http.server</code>) or host it online to fix this.
-        </div>
+        <div class="source-tag"><span class="live-dot"></span>Live data from api.modrinth.com — installs go only into this instance</div>
 
         <div class="content-tabs" id="instDlTabs">
           <button class="content-tab active" data-itype="mod">Mods</button>
@@ -1197,30 +1305,15 @@
       <div class="panel-sub">Changes to Vortex Launcher itself — not Minecraft.</div>
 
       <div class="changelog-entry">
-        <div class="changelog-version">v2.4.0 <span class="changelog-date">Latest</span></div>
+        <div class="changelog-version" id="changelogVersion">v0.1.0-alpha <span class="changelog-date">Latest</span></div>
         <ul class="changelog-list">
-          <li>Modpacks are now a separate global page — downloading one automatically creates and configures a whole new instance for you, no picking an instance required.</li>
-          <li>Each instance has its own Versions tab now, so you can view or change its Minecraft version and loader without leaving the instance.</li>
-          <li>Per-instance Downloads now covers Mods, Resource Packs, Shader Packs and Data Packs.</li>
-          <li>You can upload a custom image as an instance's icon, both when creating it and afterwards in its Settings tab.</li>
-          <li>Saves and Logs tabs are alive — add worlds to an instance's Saves list, and launching now writes real entries into its Logs.</li>
-        </ul>
-      </div>
-
-      <div class="changelog-entry">
-        <div class="changelog-version">v2.3.0</div>
-        <ul class="changelog-list">
-          <li>Introduced the instance system: create named instances, each with its own version, loader, icon, mods, resource packs, shader packs, saves and settings.</li>
-          <li>The Play bar is now pinned to the bottom across every page and gated on having an instance selected.</li>
-          <li>Removed the old global Downloads page in favor of per-instance downloads.</li>
-        </ul>
-      </div>
-
-      <div class="changelog-entry">
-        <div class="changelog-version">v2.2.0</div>
-        <ul class="changelog-list">
-          <li>Added a skin selector with presets and custom PNG upload, rendered as a front-facing paper-doll preview.</li>
-          <li>Added light/dark theme switching and a proper slide-in menu for narrow screens.</li>
+          <li>Instance system — create named instances, each with its own version, loader, mods, resource packs, saves and settings.</li>
+          <li>Multi-loader support — Fabric, Forge, NeoForge, Quilt, and Vanilla.</li>
+          <li>Modpack installation from Modrinth with automatic instance creation.</li>
+          <li>Per-instance mod, resource pack, shader pack and data pack downloads from Modrinth.</li>
+          <li>Skin selector with presets and custom PNG upload.</li>
+          <li>Java auto-detection and optional automatic download from Adoptium.</li>
+          <li>Light/dark theme switching.</li>
         </ul>
       </div>
     </section>
@@ -1364,7 +1457,7 @@
 
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   </div>
-  <div class="fan-note">Fan-made launcher UI. All game content, trademarks and the Minecraft name belong to Mojang Studios / Microsoft.</div>
+  <div class="fan-note">Fan-made launcher. All game content, trademarks and the Minecraft name belong to Mojang Studios / Microsoft.</div>
 
 <script>
 (function(){
@@ -1391,11 +1484,11 @@
   }
 
   const tips = [
-    "Tip: bring a water bucket before you go looking for lava.",
-    "Tip: sleep through the night to skip most mob spawns.",
-    "Tip: a lead keeps a stubborn mob from wandering off.",
+    "Tip: carry a water bucket — it turns lava into obsidian and puts out fires.",
+    "Tip: sleep through the night to skip most hostile mob spawns.",
     "Tip: label your chests early — future you will be grateful.",
-    "Tip: carry a spare pickaxe. Always a spare pickaxe."
+    "Tip: keep a spare pickaxe in your inventory. Always.",
+    "Tip: torches on the left mean you're heading out; on the right, you're heading home."
   ];
   document.getElementById('heroTip').textContent = tips[Math.floor(Math.random()*tips.length)];
 
@@ -1452,9 +1545,9 @@
   };
 
   async function initFromBackend(){
-    if(!hasBackend()) return; // running outside PyWebView (design preview) — keep local mock state
-    const [accs, active, insts, settingsData] = await Promise.all([
-      Backend.getAccounts(), Backend.getActiveAccount(), Backend.getInstances(), Backend.getSettings()
+    if(!hasBackend()) return;
+    const [accs, active, insts, settingsData, ver] = await Promise.all([
+      Backend.getAccounts(), Backend.getActiveAccount(), Backend.getInstances(), Backend.getSettings(), Backend.getVersion()
     ]);
     if(accs && accs.length){
       state.accounts = accs;
@@ -1464,9 +1557,15 @@
     if(settingsData){
       state.settings = settingsData;
     }
+    if(ver){
+      document.getElementById('sidebarVersion').textContent = 'v' + ver + ' · not affiliated with Mojang';
+      document.getElementById('changelogVersion').innerHTML = 'v' + ver + ' <span class="changelog-date">Latest</span>';
+      document.title = 'Vortex Launcher v' + ver;
+    }
     renderAccountCard();
     renderAccountsList();
     renderInstancesView();
+    renderHomeRecents();
     renderInstanceBar();
     applyLoadedSettingsToUI();
   }
@@ -1563,8 +1662,10 @@
           <div class="account-name">${acc.name}${isActive ? ' <span style=\"color:var(--emerald);font-size:11px\">· active</span>' : ''}</div>
           <div class="row-hint">Offline profile</div>
         </div>
-        <button class="btn-ghost" data-use="${acc.id}" style="margin-left:auto">Use</button>
-        <button class="acc-remove" data-remove="${acc.id}">✕</button>
+        <div class="acc-actions">
+          <button class="btn-ghost" data-use="${acc.id}">Use</button>
+          <button class="acc-remove" data-remove="${acc.id}">✕</button>
+        </div>
       `;
       applyAvatarVisual(row.querySelector('.acc-avatar-slot'), acc);
       list.appendChild(row);
@@ -1620,6 +1721,73 @@
     if(diff < 3600000) return Math.floor(diff/60000) + 'm ago';
     if(diff < 86400000) return Math.floor(diff/3600000) + 'h ago';
     return Math.floor(diff/86400000) + 'd ago';
+  }
+
+  function formatPlaytime(ms){
+    if(!ms || ms <= 0) return '0m';
+    const h = Math.floor(ms / 3600000);
+    const m = Math.floor((ms % 3600000) / 60000);
+    if(h > 0) return h + 'h ' + m + 'm';
+    return m + 'm';
+  }
+
+  function renderHomeRecents(){
+    const container = document.getElementById('homeRecents');
+    const statsContainer = document.getElementById('homeStats');
+    if(!container) return;
+    container.innerHTML = '';
+    const sorted = [...state.instances].sort((a,b)=>{
+      const ta = a.lastPlayed ? new Date(a.lastPlayed).getTime() : 0;
+      const tb = b.lastPlayed ? new Date(b.lastPlayed).getTime() : 0;
+      return tb - ta;
+    });
+    const recent = sorted.slice(0, 4);
+    if(!recent.length){
+      container.innerHTML = `
+        <div class="home-recent-empty">
+          <div class="home-recent-empty-icon">◆</div>
+          <div class="home-recent-empty-text"><strong>No instances yet.</strong> Create one from the Instances tab or install a modpack to get started.</div>
+        </div>`;
+    } else {
+      recent.forEach(inst => {
+        const card = document.createElement('div');
+        card.className = 'home-recent-card';
+        const modsCount = inst.mods ? inst.mods.length : 0;
+        card.innerHTML = `
+          <div class="home-recent-top">
+            <div class="home-recent-icon inst-icon-slot"></div>
+            <div>
+              <div class="home-recent-name">${inst.name}</div>
+              <div class="home-recent-lastplayed">${formatLastPlayed(inst.lastPlayed)}</div>
+            </div>
+          </div>
+          <div class="home-recent-meta">
+            <span class="home-recent-badge">${inst.version}</span>
+            <span class="home-recent-badge">${inst.loader}</span>
+            ${modsCount ? '<span class="home-recent-badge">' + modsCount + ' mod' + (modsCount > 1 ? 's' : '') + '</span>' : ''}
+          </div>
+          <button class="home-recent-play" data-play="${inst.id}">${inst.id === state.selectedInstanceId ? 'Selected' : 'Play'}</button>`;
+        applyInstanceIconVisual(card.querySelector('.inst-icon-slot'), inst);
+        card.addEventListener('click', (e)=>{
+          if(e.target.closest('button')){
+            selectInstance(e.target.dataset.play);
+            return;
+          }
+          openInstanceDetail(inst.id, 'mods');
+        });
+        container.appendChild(card);
+      });
+    }
+    const totalMods = state.instances.reduce((s,i)=> s + (i.mods ? i.mods.length : 0), 0);
+    const totalPlaytime = state.instances.reduce((s,i)=> s + (i.totalPlaytime || 0), 0);
+    const totalSaves = state.instances.reduce((s,i)=> s + (i.saves ? i.saves.length : 0), 0);
+    const totalLaunches = state.instances.reduce((s,i)=> s + (i.launchCount || 0), 0);
+    statsContainer.innerHTML = `
+      <div class="home-stat"><div class="home-stat-num">${state.instances.length}</div><div class="home-stat-label">Instances</div></div>
+      <div class="home-stat"><div class="home-stat-num">${totalMods}</div><div class="home-stat-label">Mods</div></div>
+      <div class="home-stat"><div class="home-stat-num">${totalSaves}</div><div class="home-stat-label">Worlds</div></div>
+      <div class="home-stat"><div class="home-stat-num">${totalLaunches}</div><div class="home-stat-label">Launches</div></div>
+      <div class="home-stat"><div class="home-stat-num">${formatPlaytime(totalPlaytime)}</div><div class="home-stat-label">Playtime</div></div>`;
   }
 
   function renderInstanceBar(){
@@ -1686,6 +1854,7 @@
     state.selectedInstanceId = id;
     renderInstanceBar();
     renderInstancesView();
+    renderHomeRecents();
   }
 
   async function deleteInstance(id){
@@ -1698,6 +1867,7 @@
     }
     renderInstanceBar();
     renderInstancesView();
+    renderHomeRecents();
   }
 
   function renderInstancesView(){
@@ -1814,6 +1984,7 @@
         applyInstanceIconVisual(document.getElementById('detailIcon'), inst);
         renderInstanceBar();
         renderInstancesView();
+    renderHomeRecents();
       });
       picker.appendChild(swatch);
     });
@@ -1833,6 +2004,7 @@
       applyInstanceIconVisual(document.getElementById('detailIcon'), inst);
       renderInstanceBar();
       renderInstancesView();
+    renderHomeRecents();
     };
     reader.readAsDataURL(file);
   });
@@ -2123,6 +2295,7 @@
     inst.version = this.value;
     renderInstanceDetailHeader();
     renderInstancesView();
+    renderHomeRecents();
     await Backend.updateInstance(inst.id, { version: inst.version });
   });
   document.getElementById('detailLoaderSelect').addEventListener('change', async function(){
@@ -2131,6 +2304,7 @@
     inst.loader = this.value;
     renderInstanceDetailHeader();
     renderInstancesView();
+    renderHomeRecents();
     await Backend.updateInstance(inst.id, { loader: inst.loader });
   });
 
@@ -2138,6 +2312,7 @@
     state.openInstanceId = null;
     showView('view-instances', 'Instances', 'instances');
     renderInstancesView();
+    renderHomeRecents();
   });
 
   document.getElementById('detailRamSlider').addEventListener('input', function(){
@@ -2280,6 +2455,7 @@
       } else {
         showView('view-instances', 'Instances', 'instances');
         renderInstancesView();
+    renderHomeRecents();
       }
     } catch(err){
       console.error('Modpack installation failed:', err);
@@ -2375,7 +2551,13 @@
     if(!name || !version || !loader || !(selectedIconColor || uploadedIconImage)) return;
     const iconColor = selectedIconColor || INSTANCE_ICON_COLORS[0];
     const iconImage = uploadedIconImage || null;
-    const created = await Backend.createInstance(name, version, loader, iconColor, iconImage, 4, '1920 x 1080');
+    let created;
+    try {
+      created = await Backend.createInstance(name, version, loader, iconColor, iconImage, 4, '1920 x 1080');
+    } catch(err) {
+      console.error('createInstance failed:', err);
+      created = null;
+    }
     const inst = (hasBackend() && created && !created.error) ? created : {
       id: 'inst_' + Date.now() + '_' + Math.floor(Math.random()*1000),
       name, version, loader, iconColor, iconImage,
@@ -2387,6 +2569,7 @@
     state.selectedInstanceId = inst.id;
     closeCreateModal();
     renderInstancesView();
+    renderHomeRecents();
     renderInstanceBar();
   });
 
@@ -2420,6 +2603,7 @@
       showView('view-' + item.dataset.view, viewTitles[item.dataset.view] || '', item.dataset.view);
       if(item.dataset.view === 'instances'){
         renderInstancesView();
+    renderHomeRecents();
       }
       if(item.dataset.view === 'modpacks' && !modpacksLoadedOnce){
         modpacksLoadedOnce = true;
@@ -2433,6 +2617,12 @@
       if(item.dataset.view === 'whatsnew'){
         document.getElementById('whatsNewDot').classList.add('seen');
       }
+    });
+  });
+
+  document.querySelectorAll('.home-action[data-nav]').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      showView('view-' + el.dataset.nav, viewTitles[el.dataset.nav] || '', el.dataset.nav);
     });
   });
 
@@ -2621,6 +2811,7 @@
       statusLine2.textContent = inst ? `${inst.name} · ${getActiveAccount().name}` : '';
       if(inst) inst.lastPlayed = Date.now();
       renderInstancesView();
+    renderHomeRecents();
     } else if(launchState === 'closed'){
       state.launching = false;
       state.running = false;
@@ -2644,6 +2835,7 @@
       statusLine2.textContent = message || 'See instance logs for details.';
       if(inst) inst.lastPlayed = null;
       renderInstancesView();
+    renderHomeRecents();
     }
   });
 
@@ -2912,6 +3104,7 @@
   renderAccountsList();
   renderInstanceBar();
   renderInstancesView();
+    renderHomeRecents();
   loadVersionManifest();
 
   // Then replace with authoritative data from the backend, if present.

@@ -2,7 +2,7 @@
 
 An unofficial Minecraft launcher built with Electron. Offline-mode only — no Microsoft account integration.
 
-![Vortex Launcher](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Electron](https://img.shields.io/badge/Electron-35+-purple)
+![Vortex Launcher](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Version](https://img.shields.io/badge/version-0.1.0--alpha-orange) ![Electron](https://img.shields.io/badge/Electron-35+-purple)
 
 ## Download
 
@@ -10,11 +10,25 @@ Grab the latest release from the [Releases](../../releases) page.
 
 ## Features
 
+### Home Page
+- Welcome screen with player name and random gameplay tips
+- Quick launch recent instances with one click
+- Live stats: total instances, mods, worlds, launches, and playtime
+- Quick action shortcuts to Instances, Modpacks, Skins, and Settings
+
 ### Instance System
 - Create and manage multiple named instances, each with its own Minecraft version, loader, and mods
 - Per-instance icons (built-in presets or custom uploaded images)
 - Per-instance memory and resolution overrides
 - Instance-level downloads: mods, resource packs, shader packs, and data packs
+- Delete instances with automatic filesystem cleanup
+- Track launch count and total playtime per instance
+
+### Modpacks
+- Install modpacks from [Modrinth](https://modrinth.com/) with one click
+- Automatic instance creation from `.mrpack` files
+- Version range parsing for correct Minecraft version resolution
+- Auto-downloads all required mods from the modpack manifest
 
 ### Mod Loaders
 - **Vanilla** — stock Minecraft, no mods
@@ -25,7 +39,7 @@ Grab the latest release from the [Releases](../../releases) page.
 
 All loaders resolve, download, and install automatically at launch time.
 
-### Mod & Modpack Installation
+### Mod & Content Installation
 - Install mods directly from [Modrinth](https://modrinth.com/) into any instance
 - Download mods, resource packs, shader packs, and data packs per-instance
 - Remove installed content with one click
@@ -40,8 +54,12 @@ All loaders resolve, download, and install automatically at launch time.
 - 9 built-in skin presets (Alex, Ari, Efe, Kai, Makena, Noor, Steve, Sunny, Zuri)
 - Upload custom skin PNGs (64×64 or 64×32)
 - Front-facing paper-doll preview
-- Selected skins saved to the skins folder automatically
+- Skins persist across sessions in the user data folder
 
+### Accounts
+- Offline profiles stored on this device only
+- Add, remove, and switch between multiple profiles
+- Active profile shown in the sidebar
 
 ### Settings
 - Light / dark theme toggle
@@ -51,6 +69,7 @@ All loaders resolve, download, and install automatically at launch time.
 - Keep launcher open after game exits (toggle)
 - JVM arguments (extra flags passed to Java)
 - Java path override and auto-download
+- Snapshot version toggle for the version list
 
 ### UI
 - Dark-themed interface with optional light mode
@@ -61,7 +80,7 @@ All loaders resolve, download, and install automatically at launch time.
 ## How It Works
 
 1. **Create an instance** — pick a name, Minecraft version, loader, and icon
-2. **Install content** — browse Modrinth mods or upload files directly
+2. **Install content** — browse Modrinth mods, install a modpack, or upload files directly
 3. **Hit PLAY** — the launcher downloads everything needed (client JAR, libraries, assets, loader) and starts the game
 4. All paths, classpath construction, and JVM arguments are handled automatically per loader
 
@@ -103,7 +122,7 @@ npm run dev
 ```bash
 npm run build:win     # Windows NSIS installer + portable .exe
 npm run build:mac     # macOS .dmg
-npm run build:linux   # Linux AppImage + .deb
+npm run build:linux   # Linux AppImage + .deb (run on a Linux machine)
 ```
 
 Output goes to `dist/`.
@@ -115,6 +134,7 @@ vortex-launcher/
 ├── launcher.html          # Single-file UI (HTML + CSS + JS)
 ├── package.json
 ├── .gitignore
+├── LICENSE
 ├── assets/
 │   ├── icon.ico           # App icon (Windows)
 │   ├── icon.png           # App icon (PNG)
@@ -125,15 +145,16 @@ vortex-launcher/
 │   ├── preload.js         # Context bridge (renderer ↔ main)
 │   └── backend/
 │       ├── launcher.js    # Core: version resolve, install, launch, Java detection
-│       ├── instances.js   # Instance CRUD and content tracking
+│       ├── instances.js   # Instance CRUD, content tracking, playtime
 │       ├── accounts.js    # Offline account management
 │       ├── settings.js    # Global settings persistence
-│       └── store.js       # JSON file storage
+│       └── store.js       # JSON file-backed storage
 └── dist/                  # Build output (gitignored)
 ```
 
 ### Data Locations
-- **Launcher config**: `src/data/` (settings.json, accounts.json, instances.json)
+- **Launcher config**: `AppData/Roaming/vortex-launcher/data/` (settings.json, accounts.json, instances.json)
+- **Skins**: `AppData/Roaming/vortex-launcher/skins/`
 - **Game files**: `~/vortex-launcher/` (versions, libraries, assets, instances, java)
 
 ## License
